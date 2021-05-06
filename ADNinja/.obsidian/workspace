@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bc80f5972885806d",
+        "id": "890f8fc6030758a8",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "TOOLS/test tools.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TOOLS/test tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "TOOLS/test tools.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -96,8 +90,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "bc80f5972885806d",
+  "active": "890f8fc6030758a8",
   "lastOpenFiles": [
+    "TOOLS/Report.pdf",
     "TOOLS/test tools.md",
     "test.md",
     "TOOLS/Untitled.md",
