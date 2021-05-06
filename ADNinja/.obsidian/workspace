@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file:rube",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,6 +78,16 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "2341c670a8eab154",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TOOLS/test tools.md"
+              }
+            }
           }
         ]
       }
@@ -88,8 +98,9 @@
   },
   "active": "bc80f5972885806d",
   "lastOpenFiles": [
-    "TOOLS/Untitled.md",
+    "TOOLS/test tools.md",
     "test.md",
+    "TOOLS/Untitled.md",
     "Untitled.md"
   ]
 }
