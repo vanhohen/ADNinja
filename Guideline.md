@@ -120,6 +120,18 @@ Crackmapexec
 	SMB         192.168.200.100 445    ODIN             [+] valhalla.local\administrator:Pass123! (Pwn3d!)
 
 
+
+## ms17_010_eternalblue
+
+
+	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
+
+	[+] 192.168.200.110:445   - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
+	[*] 192.168.200.110:445   - Scanned 1 of 1 hosts (100% complete)
+	[*] Auxiliary module execution completed
+	msf6 auxiliary(scanner/smb/smb_ms17_010) > 
+
+
 # Remote Code Execution
 
 Evil-WinRM
