@@ -111,7 +111,7 @@ Crackmapexec
 	SMB         192.168.200.100 445    ODIN             [+] valhalla.local\administrator:Pass123! (Pwn3d!)
 
 
-## Remote Code Execution
+# Remote Code Execution
 
 Evil-WinRM
 
