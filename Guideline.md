@@ -2,6 +2,15 @@ This is a collection of notes about active directory and (post)exploitation
 
 # Enumeration
 
+## Check smb version and server info
+
+	msf6 auxiliary(scanner/smb/smb_version) > run
+	[*] 192.168.200.100:445   - SMB Detected (versions:1, 2, 3) (preferred dialect:SMB 3.0.2) (signatures:required) (uptime:15m 42s) (guid:{0e6e2ca3-2bd4-4307-8e35-70564748263c}) (authentication domain:VALHALLA)
+	[+] 192.168.200.100:445   -   Host is running Windows 2012 R2 Standard Evaluation (build:9600) (name:ODIN) (domain:VALHALLA)
+	[*] valhalla.local:       - Scanned 1 of 1 hosts (100% complete)
+	[*] Auxiliary module execution completed
+	msf6 auxiliary(scanner/smb/smb_version) >
+
 ## Checking your rights for remote device
 
 ### SMB_Login (Metasploit)
