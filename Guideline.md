@@ -130,7 +130,9 @@ Crackmapexec
 	[*] 192.168.200.110:445   - Scanned 1 of 1 hosts (100% complete)
 	[*] Auxiliary module execution completed
 	msf6 auxiliary(scanner/smb/smb_ms17_010) > 
+	
 
+![[Pasted image 20210813024740.png]]
 
 # Remote Code Execution
 
