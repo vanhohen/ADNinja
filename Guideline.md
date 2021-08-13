@@ -1,5 +1,15 @@
 This is a collection of notes about active directory and (post)exploitation
 
+
+Check smb version and server info
+Enum Local users
+Password Bruteforce
+Enum Shares
+Checking your rights for remote device
+ms17_010_eternalblue
+
+
+
 # Enumeration
 
 ## Check smb version and server info
@@ -176,7 +186,7 @@ Evil-WinRM
 	*Evil-WinRM* PS C:\Users\Administrator\Documents> 
 
 
-### Impacket
+## Impacket
 
 wmiexec
 
