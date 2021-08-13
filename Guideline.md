@@ -177,6 +177,12 @@ Crackmapexec
 
 ## # AS-REP Roasting
 
+Acticate
+
+![image](https://user-images.githubusercontent.com/13157446/129409430-5b5cc59e-5ed3-4370-b8bf-f1fe1a00ef98.png)
+
+Run rubeus
+
 	PS C:\Users\thor\Desktop> .\Rubeus.exe asreproast
 
 	   ______        _
