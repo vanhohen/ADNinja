@@ -498,6 +498,22 @@ Open new cmd with injected ticket
 	mimikatz # misc::cmd
 	Patch OK for 'cmd.exe' from 'DisableCMD' to 'KiwiAndCMD' @ 000000004AC49C78
 
+Access remote pc with normal shell
+
+![image](https://user-images.githubusercontent.com/13157446/129424592-e3ed2a44-da5b-4092-a510-ec0c82c379af.png)
+
+
+![image](https://user-images.githubusercontent.com/13157446/129424244-a7789524-03b0-454f-9c31-00ea922325a1.png)
+
+
+Access remote pc 
+
+![image](https://user-images.githubusercontent.com/13157446/129424569-f6d10db2-4e5f-402d-beb9-f827cb25fada.png)
+
+
+![image](https://user-images.githubusercontent.com/13157446/129424166-5296aee2-0d58-4906-8331-19c1d34e3526.png)
+
+
 
 
 ## Credential Collection
