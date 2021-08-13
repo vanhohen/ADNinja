@@ -223,7 +223,7 @@ create service account
 
 set SPN for service account
 
-![setSPN](attachment/Pasted image 20210813214029.png)
+![Pasted image 20210813214029](https://user-images.githubusercontent.com/13157446/129405121-db8df286-38e3-4d16-a601-3bde3cf1da20.png)
 
 
 enum SPN users
