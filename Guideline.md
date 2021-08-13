@@ -223,7 +223,7 @@ create service account
 
 set SPN for service account
 
-![[Pasted image 20210813214029.png]]
+![setSPN](/attachment/Pasted image 20210813214029.png)
 
 
 enum SPN users
