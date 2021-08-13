@@ -212,6 +212,11 @@ Crackmapexec
 
 ## Kerberoasting
 
+create OU for service accounts
+
+![image](https://user-images.githubusercontent.com/13157446/129405912-68180d26-1ab2-447f-9e59-4d8f123ffec9.png)
+
+
 create service account
 
 	#requires -module ActiveDirectory
