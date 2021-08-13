@@ -514,8 +514,6 @@ Access remote pc
 ![image](https://user-images.githubusercontent.com/13157446/129424166-5296aee2-0d58-4906-8331-19c1d34e3526.png)
 
 
-
-
 ## Credential Collection
 
 mimikatz (cmd needs to run administrators rights / locally)
