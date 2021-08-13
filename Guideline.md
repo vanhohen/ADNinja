@@ -1,6 +1,10 @@
 This is a collection of notes about active directory and (post)exploitation
 
 
+https://github.com/vanhohen/ADNinja/blob/main/Guideline.md#enumeration Enumeration
+
+
+
 # Enumeration
 
 ## Check smb version and server info
