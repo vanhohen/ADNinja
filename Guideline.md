@@ -1,6 +1,6 @@
 This is a collection of notes about active directory and (post)exploitation
 
-
+[Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Guideline.md#enumeration)
 
 # Enumeration
 
