@@ -175,7 +175,7 @@ Crackmapexec
 	
 	bloodhound (another terminal)
 
-## # AS-REP Roasting
+## AS-REP Roasting
 
 Activate
 
@@ -215,6 +215,10 @@ Run rubeus
 		  C3BA2E4EE2D101BAD135EE6B3784DBC36BD94AFCC79E0271F9B84D3E1BA73659202FD15AB9B37EF4
 		  EEFB4C8318395D9FC80D8F83751030F799419BF16FED209F3BC2CFFB15FB9EBBC6A
 	
+	
+Crack it 
+
+	hashcat -m 18200 hash.txt 500.txt --force 
 
 ## Kerberoasting
 
