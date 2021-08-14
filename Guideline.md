@@ -1,6 +1,5 @@
 This is a collection of notes about active directory and (post)exploitation
 
-
 - [Enumeration](#enumeration)
   * [Check smb version and server info](#check-smb-version-and-server-info)
     + [metasploit](#metasploit)
@@ -19,6 +18,9 @@ This is a collection of notes about active directory and (post)exploitation
   * [Sharphound](#sharphound)
   * [Bloodhound](#bloodhound)
 - [Exploitation](#exploitation)
+  * [Abusing ACL](#abusing-acl)
+    + [GenericALL (User)](#genericall--user-)
+    + [GenericALL (Group)](#genericall--group-)
   * [ms17_010_eternalblue](#ms17-010-eternalblue)
     + [smb_ms17_010 (metasploit)](#smb-ms17-010--metasploit-)
   * [AS-REP Roasting](#as-rep-roasting)
@@ -40,7 +42,6 @@ This is a collection of notes about active directory and (post)exploitation
     + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 
 
