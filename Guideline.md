@@ -514,7 +514,7 @@ Access remote pc
 ![image](https://user-images.githubusercontent.com/13157446/129424166-5296aee2-0d58-4906-8331-19c1d34e3526.png)
 
 
-## Machine Domain admin
+## Machine Domain admin (Use machine NTLM hash)
 
 	We need Local Admin rights on machine
 
