@@ -551,7 +551,7 @@ Access remote pc
 
 Use mimikatz and read machine NTLM hash
 
-Using 'Machine_hash.txt' for logfile : OK
+	Using 'Machine_hash.txt' for logfile : OK
 
 	mimikatz # privilege::debug
 	Privilege '20' OK
