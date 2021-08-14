@@ -6,6 +6,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [metasploit](#metasploit)
     + [crackmapexec](#crackmapexec)
   * [Enum Local users](#enum-local-users)
+    + [impacket-lookupsid](#impacket-lookupsid)
   * [Password Bruteforce](#password-bruteforce)
     + [Metasploit](#metasploit)
     + [Crackmapexec](#crackmapexec)
@@ -41,6 +42,7 @@ This is a collection of notes about active directory and (post)exploitation
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
+
 # Enumeration
 
 ## Check smb version and server info
@@ -64,6 +66,7 @@ This is a collection of notes about active directory and (post)exploitation
 
 ## Enum Local users
 
+### impacket-lookupsid
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-lookupsid valhalla/thor:Pass123\!@192.168.200.110
