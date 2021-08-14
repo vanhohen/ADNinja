@@ -371,7 +371,7 @@ Computer-1 will nagigate
 
 	\\idontexit
 
-We will capture that Computer-1 request to relay our targets. If User who logged in computer-1 has Admin rights for our targets, we will get SAM hash for computer
+We will capture that Computer-1 request to relay our targets. If User who logged in computer-1 has Admin rights for our targets, we will get SAM hash off our targets
 
 
 responder shell
