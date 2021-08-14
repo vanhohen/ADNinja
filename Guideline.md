@@ -16,11 +16,11 @@ This is a collection of notes about active directory and (post)exploitation
   * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
     + [SMB_Login (Metasploit)](#smb-login--metasploit-)
     + [Crackmapexec](#crackmapexec-1)
-  * [ms17_010_eternalblue](#ms17-010-eternalblue)
   * [Sharphound](#sharphound)
   * [Bloodhound](#bloodhound)
 - [Exploitation](#exploitation)
-  * [ms17_010_eternalblue](#ms17-010-eternalblue-1)
+  * [ms17_010_eternalblue](#ms17-010-eternalblue)
+    + [smb_ms17_010 (metasploit)](#smb-ms17-010--metasploit-)
   * [AS-REP Roasting](#as-rep-roasting)
     + [Generate vulnerability](#generate-vulnerability)
     + [Exploitation](#exploitation-1)
@@ -40,6 +40,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -178,18 +179,7 @@ This is a collection of notes about active directory and (post)exploitation
 	└─$ crackmapexec smb valhalla.local -u administrator -p Pass123!                                                                                   1 ⚙
 	SMB         192.168.200.100 445    ODIN             [*] Windows Server 2012 R2 Standard Evaluation 9600 x64 (name:ODIN) (domain:valhalla.local) (signing:True) (SMBv1:True)
 	SMB         192.168.200.100 445    ODIN             [+] valhalla.local\administrator:Pass123! (Pwn3d!)
-
-
-
-## ms17_010_eternalblue
-
-
-	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
-
-	[+] 192.168.200.110:445   - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
-	[*] 192.168.200.110:445   - Scanned 1 of 1 hosts (100% complete)
-	[*] Auxiliary module execution completed
-	msf6 auxiliary(scanner/smb/smb_ms17_010) > 
+ 
 	
 
 ## Sharphound
@@ -224,6 +214,7 @@ This is a collection of notes about active directory and (post)exploitation
 
 ## ms17_010_eternalblue
 
+### smb_ms17_010 (metasploit)
 
 	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
 
