@@ -212,6 +212,12 @@ This is a collection of notes about active directory and (post)exploitation
 
 # Exploitation
 
+## Abusing ACL
+
+### GenericALL (User)
+
+We will check bloodhound and user has GenericAll rights for another user
+
 ## ms17_010_eternalblue
 
 ### smb_ms17_010 (metasploit)
