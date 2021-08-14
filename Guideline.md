@@ -613,7 +613,6 @@ Pash-the-Hash machine NTLM hash and spawn a CMD
 
 regular cmd shell (access denied)
 
-
 ![image](https://user-images.githubusercontent.com/13157446/129442954-661ab321-9c6b-4a35-9d6f-48e21d0821d1.png)
 
 
