@@ -574,7 +574,7 @@ Activate
 
 Run Rubeus
 
-	PS C:\Users\thor\Desktop> .\Rubeus.exe asreproast
+	PS C:\Users\thor\Desktop> .\Rubeus.exe asreproast /outfile:hash.txt /format:hashcat
 
 	   ______        _
 	  (_____ \      | |
