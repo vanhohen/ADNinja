@@ -29,6 +29,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [mimikatz logonpasswords (cmd needs to run administrators rights / locally)](#mimikatz-logonpasswords--cmd-needs-to-run-administrators-rights---locally-)
     + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # Enumeration
 
