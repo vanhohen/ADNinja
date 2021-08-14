@@ -1,5 +1,24 @@
 This is a collection of notes about active directory and (post)exploitation
 
+- [Enumeration](#enumeration)
+  * [Check smb version and server info](#check-smb-version-and-server-info)
+  * [Enum Local users](#enum-local-users)
+  * [Password Bruteforce](#password-bruteforce)
+  * [Enum Shares](#enum-shares)
+  * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
+  * [ms17_010_eternalblue](#ms17-010-eternalblue)
+  * [Sharphound](#sharphound)
+  * [Bloodhound](#bloodhound)
+  * [AS-REP Roasting](#as-rep-roasting)
+  * [Kerberoasting](#kerberoasting)
+- [Remote Code Execution](#remote-code-execution)
+  * [Impacket](#impacket)
+- [Post-Exploitation](#post-exploitation)
+  * [Golden Ticket](#golden-ticket)
+  * [Machine Domain admin (Use machine NTLM hash)](#machine-domain-admin--use-machine-ntlm-hash-)
+  * [Credential Collection](#credential-collection)
+
+
 # Enumeration
 
 ## Check smb version and server info
