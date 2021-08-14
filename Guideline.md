@@ -10,7 +10,11 @@ This is a collection of notes about active directory and (post)exploitation
   * [Sharphound](#sharphound)
   * [Bloodhound](#bloodhound)
   * [AS-REP Roasting](#as-rep-roasting)
+    + [Generate vulnerability](#generate-vulnerability)
+    + [Exploitation](#exploitation)
   * [Kerberoasting](#kerberoasting)
+    + [Generate vulnerability](#generate-vulnerability-1)
+    + [Exploitation](#exploitation-1)
 - [Remote Code Execution](#remote-code-execution)
   * [Evil-WinRM](#evil-winrm)
   * [Impacket](#impacket)
@@ -201,9 +205,13 @@ Crackmapexec
 
 ## AS-REP Roasting
 
+### Generate vulnerability
+
 Activate
 
 ![image](https://user-images.githubusercontent.com/13157446/129409430-5b5cc59e-5ed3-4370-b8bf-f1fe1a00ef98.png)
+
+### Exploitation
 
 Run Rubeus
 
@@ -246,6 +254,8 @@ Crack it
 
 ## Kerberoasting
 
+### Generate vulnerability
+
 Create OU for service accounts
 
 ![image](https://user-images.githubusercontent.com/13157446/129405912-68180d26-1ab2-447f-9e59-4d8f123ffec9.png)
@@ -264,6 +274,8 @@ Set SPN for service account
 
 ![Pasted image 20210813214029](https://user-images.githubusercontent.com/13157446/129405121-db8df286-38e3-4d16-a601-3bde3cf1da20.png)
 
+
+### Exploitation
 
 Enum SPN users with Rubeus
 
