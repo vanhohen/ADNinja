@@ -1,15 +1,19 @@
 This is a collection of notes about active directory and (post)exploitation
-
 - [Enumeration](#enumeration)
   * [Check smb version and server info](#check-smb-version-and-server-info)
     + [metasploit](#metasploit)
     + [crackmapexec](#crackmapexec)
   * [Enum Local users](#enum-local-users)
+    + [rpcclient](#rpcclient)
     + [impacket-lookupsid](#impacket-lookupsid)
-  * [Password Bruteforce](#password-bruteforce)
+  * [Bruteforce](#bruteforce)
+    + [Rdp Brute Force](#rdp-brute-force)
+    + [Kerbrute](#kerbrute)
     + [Metasploit](#metasploit)
     + [Crackmapexec](#crackmapexec)
   * [Enum Shares](#enum-shares)
+    + [smbclient](#smbclient)
+    + [smbmap](#smbmap)
     + [smb_enumshares (Metasploit)](#smb-enumshares--metasploit-)
     + [crackmaexec (--shares)](#crackmaexec----shares-)
   * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
@@ -45,6 +49,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
