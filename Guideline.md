@@ -1,6 +1,10 @@
 This is a collection of notes about active directory and (post)exploitation
+
+
+
 - [Enumeration](#enumeration)
   * [Check smb version and server info](#check-smb-version-and-server-info)
+    + [nmap](#nmap)
     + [metasploit](#metasploit)
     + [crackmapexec](#crackmapexec)
   * [Enum Local users](#enum-local-users)
@@ -14,20 +18,20 @@ This is a collection of notes about active directory and (post)exploitation
   * [Enum Shares](#enum-shares)
     + [smbclient](#smbclient)
     + [smbmap](#smbmap)
-    + [smb_enumshares (Metasploit)](#smb-enumshares--metasploit-)
-    + [crackmaexec (--shares)](#crackmaexec----shares-)
+    + [smb_enumshares / Metasploit](#smb-enumshares---metasploit)
+    + [crackmaexec / shares](#crackmaexec---shares)
   * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
-    + [SMB_Login (Metasploit)](#smb-login--metasploit-)
+    + [SMB_Login / Metasploit](#smb-login---metasploit)
     + [Crackmapexec](#crackmapexec-1)
   * [Sharphound](#sharphound)
   * [Bloodhound](#bloodhound)
 - [Exploitation](#exploitation)
   * [SMB Relay Attack](#smb-relay-attack)
   * [Abusing ACL](#abusing-acl)
-    + [GenericALL (User)](#genericall--user-)
-    + [GenericALL (Group)](#genericall--group-)
+    + [GenericALL / User](#genericall---user)
+    + [GenericALL / Group](#genericall---group)
   * [ms17_010_eternalblue](#ms17-010-eternalblue)
-    + [smb_ms17_010 (metasploit)](#smb-ms17-010--metasploit-)
+    + [smb_ms17_010 / metasploit](#smb-ms17-010---metasploit)
   * [AS-REP Roasting](#as-rep-roasting)
     + [Generate vulnerability](#generate-vulnerability)
     + [Exploitation](#exploitation-1)
@@ -49,6 +53,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [mimikatz dcsync (dcsync / authuser should be admin rights)](#mimikatz-dcsync--dcsync---authuser-should-be-admin-rights-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -313,7 +318,7 @@ Connect
 			SYSVOL                                                  READ ONLY       Logon server share 
 
 
-### smb_enumshares (Metasploit)
+### smb_enumshares / Metasploit
 
 	msf6 auxiliary(scanner/smb/smb_enumshares) > set smbuser thor
 	smbuser => thor
@@ -337,7 +342,7 @@ Connect
 	[*] Auxiliary module execution completed
 
 
-### crackmaexec (--shares)
+### crackmaexec / shares
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p Pass123! -d valhalla.local --shares
@@ -356,7 +361,7 @@ Connect
 
 ## Checking your rights for remote device
 
-### SMB_Login (Metasploit)
+### SMB_Login / Metasploit
 
 	msf6 auxiliary(scanner/smb/smb_login) > set smbuser administrator
 	smbuser => administrator
@@ -621,7 +626,7 @@ ntlmrelayx shell
 
 ## Abusing ACL
 
-### GenericALL (User)
+### GenericALL / User
 
 We will check bloodhound and user has GenericAll rights for another user
 
@@ -645,7 +650,7 @@ Fail with another user
 	PS C:\Users\testuser\Desktop\sharphound>
 
 
-### GenericALL (Group)
+### GenericALL / Group
 
 Groups for dontmindme user 
 
@@ -746,7 +751,7 @@ try to add with idontmind user
 
 ## ms17_010_eternalblue
 
-### smb_ms17_010 (metasploit)
+### smb_ms17_010 / metasploit
 
 	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
 
