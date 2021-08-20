@@ -67,6 +67,30 @@ rubeus
 
 # Enumeration
 
+## Active Directory Enumeration
+
+Get current Domain and Domain controller
+
+	$var = [System.DirectoryServices.ActiveDirectory.Domain]
+	$var::GetCurrentDomain()
+
+Powerview
+
+	Recon> Get-NetDomain
+	
+	
+	Forest                  : valhalla.local
+	DomainControllers       : {odin.valhalla.local}
+	Children                : {}
+	DomainMode              :
+	Parent                  :
+	PdcRoleOwner            : odin.valhalla.local
+	RidRoleOwner            : odin.valhalla.local
+	InfrastructureRoleOwner : odin.valhalla.local
+	Name                    : valhalla.local
+	
+	
+
 ## Check smb version and server info
 
 ### nmap
