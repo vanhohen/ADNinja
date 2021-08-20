@@ -56,7 +56,14 @@ This is a collection of notes about active directory and (post)exploitation
 
 
 
+# USEFULL TOOLS
 
+Metasploit
+Covenant
+Powerview
+Mimikatz
+kerbrute
+rubeus
 
 # Enumeration
 
