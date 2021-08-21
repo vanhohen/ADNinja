@@ -103,6 +103,13 @@ This is a collection of notes about active directory and (post)exploitation
 	https://docs.microsoft.com/en-us/sysinternals/downloads/
 
 
+## UACME
+
+	https://github.com/hfiref0x/UACME
+	
+
+
+
 # Enumeration
 
 ## Active Directory Enumeration
