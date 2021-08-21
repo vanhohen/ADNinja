@@ -824,6 +824,10 @@ try to add with idontmind user
 
 ## AS-REP Roasting
 
+If Kerberos Pre-Authentication is enabled, a [Timestamp](https://ldapwiki.com/wiki/Timestamp) will be [encrypted](https://ldapwiki.com/wiki/Encrypted) using the user's [password](https://ldapwiki.com/wiki/Password) [hash](https://ldapwiki.com/wiki/Hash) as an [encryption](https://ldapwiki.com/wiki/Encryption) [key](https://ldapwiki.com/wiki/Key). If the [KDC](https://ldapwiki.com/wiki/KDC) reads a valid time when using the user's password hash, which is available in the [Microsoft Active Directory](https://ldapwiki.com/wiki/Microsoft%20Active%20Directory), to decrypt the [Timestamp](https://ldapwiki.com/wiki/Timestamp), the [KDC](https://ldapwiki.com/wiki/KDC) knows that request isn't a replay of a previous request.
+
+Without Kerberos Pre-Authentication a [malicious](https://ldapwiki.com/wiki/Malicious) [attacker](https://ldapwiki.com/wiki/Attacker) can directly send a dummy request for [authentication](https://ldapwiki.com/wiki/Authentication). The [KDC](https://ldapwiki.com/wiki/KDC) will return an [encrypted](https://ldapwiki.com/wiki/Encrypted) [TGT](https://ldapwiki.com/wiki/TGT) and the [attacker](https://ldapwiki.com/wiki/Attacker) can brute force it offline.
+
 ### Generate vulnerability
 
 Activate
@@ -831,11 +835,6 @@ Activate
 ![image](https://user-images.githubusercontent.com/13157446/129409430-5b5cc59e-5ed3-4370-b8bf-f1fe1a00ef98.png)
 
 ### Exploitation
-
-If Kerberos Pre-Authentication is enabled, a [Timestamp](https://ldapwiki.com/wiki/Timestamp) will be [encrypted](https://ldapwiki.com/wiki/Encrypted) using the user's [password](https://ldapwiki.com/wiki/Password) [hash](https://ldapwiki.com/wiki/Hash) as an [encryption](https://ldapwiki.com/wiki/Encryption) [key](https://ldapwiki.com/wiki/Key). If the [KDC](https://ldapwiki.com/wiki/KDC) reads a valid time when using the user's password hash, which is available in the [Microsoft Active Directory](https://ldapwiki.com/wiki/Microsoft%20Active%20Directory), to decrypt the [Timestamp](https://ldapwiki.com/wiki/Timestamp), the [KDC](https://ldapwiki.com/wiki/KDC) knows that request isn't a replay of a previous request.
-
-Without Kerberos Pre-Authentication a [malicious](https://ldapwiki.com/wiki/Malicious) [attacker](https://ldapwiki.com/wiki/Attacker) can directly send a dummy request for [authentication](https://ldapwiki.com/wiki/Authentication). The [KDC](https://ldapwiki.com/wiki/KDC) will return an [encrypted](https://ldapwiki.com/wiki/Encrypted) [TGT](https://ldapwiki.com/wiki/TGT) and the [attacker](https://ldapwiki.com/wiki/Attacker) can brute force it offline.
-
 
 
 Run Rubeus
