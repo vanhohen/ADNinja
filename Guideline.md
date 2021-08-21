@@ -1,7 +1,15 @@
 This is a collection of notes about active directory and (post)exploitation
 
-
 - [USEFULL TOOLS](#usefull-tools)
+  * [Metasploit](#metasploit)
+  * [Bloodhound](#bloodhound)
+  * [Sharphound](#sharphound)
+  * [Covenant](#covenant)
+  * [Powerview](#powerview)
+  * [Mimikatz](#mimikatz)
+  * [Kerbrute](#kerbrute)
+  * [Rubeus](#rubeus)
+  * [Sysinternals](#sysinternals)
 - [Enumeration](#enumeration)
   * [Active Directory Enumeration](#active-directory-enumeration)
   * [Check smb version and server info](#check-smb-version-and-server-info)
@@ -13,8 +21,8 @@ This is a collection of notes about active directory and (post)exploitation
     + [impacket-lookupsid](#impacket-lookupsid)
   * [Bruteforce](#bruteforce)
     + [Rdp Brute Force](#rdp-brute-force)
-    + [Kerbrute](#kerbrute)
-    + [Metasploit](#metasploit)
+    + [Kerbrute](#kerbrute-1)
+    + [Metasploit](#metasploit-1)
     + [Crackmapexec](#crackmapexec)
   * [Enum Shares](#enum-shares)
     + [smbclient](#smbclient)
@@ -24,8 +32,8 @@ This is a collection of notes about active directory and (post)exploitation
   * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
     + [SMB_Login](#smb-login)
     + [Crackmapexec](#crackmapexec-1)
-  * [Sharphound](#sharphound)
-  * [Bloodhound](#bloodhound)
+  * [Sharphound](#sharphound-1)
+  * [Bloodhound](#bloodhound-1)
 - [Exploitation](#exploitation)
   * [SMB Relay Attack](#smb-relay-attack)
   * [ms17_010_eternalblue](#ms17-010-eternalblue)
@@ -59,14 +67,41 @@ This is a collection of notes about active directory and (post)exploitation
 
 
 
+
 # USEFULL TOOLS
 
-Metasploit
-Covenant
-Powerview
-Mimikatz
-kerbrute
-rubeus
+## Metasploit
+## Bloodhound
+
+	https://github.com/BloodHoundAD/BloodHound
+	
+## Sharphound
+
+	https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors
+	
+## Covenant
+
+	https://github.com/cobbr/Covenant
+
+## Powerview
+
+	https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon
+
+## Mimikatz
+	https://github.com/gentilkiwi/mimikatz
+	
+## Kerbrute
+
+	https://github.com/ropnop/kerbrute
+	
+## Rubeus
+
+	https://github.com/GhostPack/Rubeus
+
+## Sysinternals
+
+	https://docs.microsoft.com/en-us/sysinternals/downloads/
+
 
 # Enumeration
 
