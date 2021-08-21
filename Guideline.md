@@ -650,7 +650,9 @@ ntlmrelayx shell
 
 ## Pass the Ticket
 
-first check for Ticket Granting Ticket inside memory
+firstly administrator should RDP to remote host so TGT will be stored inside memory
+
+Check for Ticket Granting Ticket inside memory
 
 	sekurlsa::tickets
 	
@@ -672,6 +674,11 @@ inject TGT the memory and open cmd
 check current tickets
 
 ![image](https://user-images.githubusercontent.com/13157446/130304182-ed7a2ea7-c7fa-4112-8a24-209407b715b2.png)
+
+
+check you access
+
+	dir \\odin\c$\
 
 
 ## Abusing ACL
