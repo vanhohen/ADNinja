@@ -1,6 +1,5 @@
 This is a collection of notes about active directory and (post)exploitation
 
-
 - [USEFULL TOOLS](#usefull-tools)
 - [Enumeration](#enumeration)
   * [Active Directory Enumeration](#active-directory-enumeration)
@@ -28,6 +27,7 @@ This is a collection of notes about active directory and (post)exploitation
   * [Bloodhound](#bloodhound)
 - [Exploitation](#exploitation)
   * [SMB Relay Attack](#smb-relay-attack)
+  * [Pass the Hash](#pass-the-hash)
   * [Pass the Ticket](#pass-the-ticket)
   * [Abusing ACL](#abusing-acl)
     + [GenericALL-User](#genericall-user)
