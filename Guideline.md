@@ -37,8 +37,8 @@ This is a collection of notes about active directory and (post)exploitation
   * [Bloodhound](#bloodhound-1)
 - [Exploitation](#exploitation)
   * [SMB Relay Attack](#smb-relay-attack)
-  * [ms17_010_eternalblue](#ms17-010-eternalblue)
-    + [smb_ms17_010](#smb-ms17-010)
+  * [ms17-010-eternalblue](#ms17-010-eternalblue)
+    + [smb-ms17-010](#smb-ms17-010)
   * [AS-REP Roasting](#as-rep-roasting)
     + [Generate vulnerability](#generate-vulnerability)
     + [Exploitation](#exploitation-1)
@@ -65,6 +65,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [mimikatz dcsync](#mimikatz-dcsync)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -693,9 +694,9 @@ ntlmrelayx shell
 	[*] Stopping service RemoteRegistry
 
 
-## ms17_010_eternalblue
+## ms17-010-eternalblue
 
-### smb_ms17_010
+### smb-ms17-010
 
 	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
 
