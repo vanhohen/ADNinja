@@ -663,8 +663,6 @@ Export tickets
 	Sekurlsa::tickets /export
 
 
-
-
 inject TGT the memory and open cmd
 
 ![image](https://user-images.githubusercontent.com/13157446/130304151-8d126e88-b567-4404-9e3b-4baff232adcf.png)
