@@ -659,7 +659,7 @@ Check for Ticket Granting Ticket inside memory
 	sekurlsa::tickets
 	
 
-![image](https://user-images.githubusercontent.com/13157446/130304125-07efe183-1344-40b9-8fcd-1189f0ac3a6b.png)
+![image](https://user-images.githubusercontent.com/13157446/130322640-4a7ede43-c670-4c46-8495-ac120415c3e2.png)
 
 	
 Export tickets
@@ -669,18 +669,21 @@ Export tickets
 
 inject TGT the memory and open cmd
 
-![image](https://user-images.githubusercontent.com/13157446/130304151-8d126e88-b567-4404-9e3b-4baff232adcf.png)
+![image](https://user-images.githubusercontent.com/13157446/130322674-610de4dc-5998-4fd1-ab96-d3807741f8b5.png)
 
 
 
 check current tickets
 
-![image](https://user-images.githubusercontent.com/13157446/130304182-ed7a2ea7-c7fa-4112-8a24-209407b715b2.png)
+![image](https://user-images.githubusercontent.com/13157446/130322696-6d6da2c7-0982-4650-994a-f2bed7f6fc94.png)
 
 
 check you access
 
 	dir \\odin\c$\
+
+
+![image](https://user-images.githubusercontent.com/13157446/130322707-c5e5d93c-cf17-46f7-9b08-a675ec60a83d.png)
 
 
 ## Abusing ACL
