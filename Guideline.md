@@ -654,7 +654,9 @@ first check for Ticket Granting Ticket inside memory
 
 	sekurlsa::tickets
 	
-	
+
+![image](https://user-images.githubusercontent.com/13157446/130304125-07efe183-1344-40b9-8fcd-1189f0ac3a6b.png)
+
 	
 Export tickets
 
@@ -662,14 +664,16 @@ Export tickets
 
 
 
-inject TGT the memory
 
+inject TGT the memory and open cmd
 
+![image](https://user-images.githubusercontent.com/13157446/130304151-8d126e88-b567-4404-9e3b-4baff232adcf.png)
 
 
 
 check current tickets
 
+![image](https://user-images.githubusercontent.com/13157446/130304182-ed7a2ea7-c7fa-4112-8a24-209407b715b2.png)
 
 
 ## Abusing ACL
