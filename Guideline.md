@@ -648,7 +648,15 @@ ntlmrelayx shell
 
 
 
+## Pass the Ticket
 
+first check for Ticket Granting Ticket inside memory
+
+
+inject TGT the memory
+
+
+check current tickets
 
 
 
