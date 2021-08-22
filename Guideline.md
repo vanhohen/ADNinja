@@ -204,6 +204,39 @@ Get AD users and details
 	lazyuser       lazyuser
 
 
+Get Shares on AD enviroment
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Find-DomainShare
+
+	Name           Type Remark              ComputerName
+	----           ---- ------              ------------
+	ADMIN$   2147483648 Remote Admin        odin.valhalla.local
+	C$       2147483648 Default share       odin.valhalla.local
+	IPC$     2147483651 Remote IPC          odin.valhalla.local
+	NETLOGON          0 Logon server share  odin.valhalla.local
+	share             0                     odin.valhalla.local
+	SYSVOL            0 Logon server share  odin.valhalla.local
+	ADMIN$   2147483648 Remote Admin        loki.valhalla.local
+	C$       2147483648 Default share       loki.valhalla.local
+	IPC$     2147483651 Remote IPC          loki.valhalla.local
+	share             0                     loki.valhalla.local
+
+
+Get GPO objects 
+
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-DomainGPO | select displayname, gpcfilesyspath
+
+	displayname                       gpcfilesyspath
+	-----------                       --------------
+	Default Domain Policy             \\valhalla.local\sysvol\valhalla.local\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}
+	Default Domain Controllers Policy \\valhalla.local\sysvol\valhalla.local\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}
+	file_copy                         \\valhalla.local\SysVol\valhalla.local\Policies\{3B55057F-EE19-469C-ACD6-37D9F3325D0A}
+	Create Local Admin                \\valhalla.local\SysVol\valhalla.local\Policies\{D96909A1-1659-40E6-894A-50B01B469E19}
+	Disable Firewall                  \\valhalla.local\SysVol\valhalla.local\Policies\{42EFB49A-9915-4DDD-8B97-77B1AE262A48}
+	Disable Windows Defender          \\valhalla.local\SysVol\valhalla.local\Policies\{AF7B0056-348A-45D1-A9D3-490C93DFD017}
+
+
 
 ## Check smb version and server info
 
