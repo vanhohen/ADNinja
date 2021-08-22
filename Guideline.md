@@ -204,7 +204,7 @@ Get AD users and details
 	lazyuser       lazyuser
 
 
-Get Shares on AD enviroment
+Get shares on AD enviroment
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Find-DomainShare
 
@@ -220,6 +220,22 @@ Get Shares on AD enviroment
 	C$       2147483648 Default share       loki.valhalla.local
 	IPC$     2147483651 Remote IPC          loki.valhalla.local
 	share             0                     loki.valhalla.local
+
+
+Get shares on AD only user has permission
+
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Find-DomainShare -CheckShareAccess
+
+	Name           Type Remark              ComputerName
+	----           ---- ------              ------------
+	NETLOGON          0 Logon server share  odin.valhalla.local
+	share             0                     odin.valhalla.local
+	SYSVOL            0 Logon server share  odin.valhalla.local
+	ADMIN$   2147483648 Remote Admin        loki.valhalla.local
+	C$       2147483648 Default share       loki.valhalla.local
+	share             0                     loki.valhalla.local
+
 
 
 Get GPO objects 
