@@ -133,7 +133,7 @@ Powerview
 	Name                    : valhalla.local
 	
 
-get computers in active directory, later it could be used for detecting subnets and ip
+Cet AD Computers, later it could be used for detecting subnets and ip
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-NetComputer | select cn,operatingsystem
 	cn   operatingsystem
@@ -141,6 +141,67 @@ get computers in active directory, later it could be used for detecting subnets 
 	ODIN Windows Server 2012 R2 Standard Evaluation
 	THOR Windows 7 Professional
 	LOKI Windows 10 Pro
+
+
+Get AD users and details
+
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-DomainUser | select samaccountname, cn, title, description
+
+	samaccountname cn                 title                                    description
+	-------------- --                 -----                                    -----------
+	Administrator  Administrator                                               Built-in account for administering the computer/domain
+	Guest          Guest                                                       Built-in account for guest access to the computer/domain
+	krbtgt         krbtgt                                                      Key Distribution Center Service Account
+	danj           Dan Jump           CEO
+	adamb          Adam Barr          General Manager of Professional Services
+	alans          Alan Steiner       Director of Project Management Team
+	dianet         Diane Tibbot       CFO of Professional Services
+	danp           Dan Park           Vice President NA Sales
+	davidm         David Maman        Strategy Consulting Manager
+	alanb          Alan Brewer        Regional Sales Manager
+	davids         David Simpson      Sales Manager
+	eduardd        Eduard Dell        Regional Sales Manager
+	aaronp         Aaron Painter      Strategy Consulting Manager
+	dianep         Diane Prescott     Director of Ad Sales
+	ellena         Ellen Adams        Strategy Consulting Manager
+	davidz         David Zazzo        Managing Director
+	davidh         David Hamilton     CRM Consultant
+	allang         Allan Guinot       Engineer
+	donh           Don Hall           Strategy Consultant
+	allisob        Allison Brown      Strategy Consultant
+	davidd         David Derwin       Project Manager
+	davids1        David So           Project Manager
+	alexans        Alexandre Silva    Project Manager
+	qiongw         Qiong Wu           Project Manager
+	doughm         Dough Mahugh       Project Manager
+	danb           Dan Bacon          Project Manager
+	danield        Daniel Durrer      Project Manager
+	alfonsp        Alfons Parovszky   Content Management Consultant
+	corinnb        Corinna Bolender   Engineer
+	rayc           Ray Chow           Strategy Consultant
+	dianeg         Diane Glimp        Content Management Consultant
+	elizaba        Elizabeth Andersen Salesperson
+	denisd         Denis Dehenne      Project Manager
+	davidw         David Wright       Salesperson
+	alisal         Alisa Lawyer       Project Manager
+	donf           Don Funk           Project Manager
+	daven          Dave Natsuhara     Project Manager
+	raym           Ray Mohrman        Senior Project Manager
+	dannio         Danni Ortman       Senior Project Manager
+	yex            Ye Xu              Salesperson
+	dominip        Dominik Paiha      Salesperson
+	danh           Dan Hough          Salesperson
+	davidb         David Bossard      Salesperson
+	aliciat        Alicia Thomber     Salesperson
+	davidb1        David Bradley      Manager
+	roastme        roastme
+	kerberoastme   kerberoastme
+	testuser       testuser                                                    Password Pass123!
+	dontmindme     dontmindme
+	iwouldmind     iwouldmind
+	mrblack        mrblack
+	lazyuser       lazyuser
 
 
 
