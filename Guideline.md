@@ -1609,6 +1609,13 @@ regular cmd shell (access denied)
 
 ## Credential Collection
 
+### mimikatz lsass.DMP local analyze
+
+if we cant run mimikatz on target machine, we can get dump of lsass process and analyze local computer.
+
+
+
+
 ### mimikatz logonpasswords
 
  cmd needs to run administrators rights / locally
