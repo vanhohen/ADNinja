@@ -1615,6 +1615,7 @@ if we cant run mimikatz on target machine, we can get dump of lsass process and 
 
 Create dump of process (need administrator rights)
 
+![image](https://user-images.githubusercontent.com/13157446/130370304-7543ddde-fe67-4094-95d8-df3ecf252352.png)
 
 
 Dump file is located
