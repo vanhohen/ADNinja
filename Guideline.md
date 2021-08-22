@@ -61,6 +61,7 @@ This is a collection of notes about active directory and (post)exploitation
   * [Golden Ticket](#golden-ticket)
   * [Machine Domain admin-Use machine NTLM hash](#machine-domain-admin-use-machine-ntlm-hash)
   * [Credential Collection](#credential-collection)
+    + [mimikatz lsass.DMP local analyze](#mimikatz-lsassdmp-local-analyze)
     + [mimikatz logonpasswords](#mimikatz-logonpasswords)
     + [mimikatz dcsync](#mimikatz-dcsync)
 
