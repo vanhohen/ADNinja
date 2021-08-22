@@ -68,9 +68,6 @@ This is a collection of notes about active directory and (post)exploitation
 
 
 
-
-
-
 # USEFULL TOOLS
 
 ## Metasploit
@@ -111,8 +108,6 @@ This is a collection of notes about active directory and (post)exploitation
 	https://github.com/hfiref0x/UACME
 	
 
-
-
 # Enumeration
 
 ## Active Directory Enumeration
@@ -137,7 +132,17 @@ Powerview
 	InfrastructureRoleOwner : odin.valhalla.local
 	Name                    : valhalla.local
 	
-	
+
+get computers in active directory, later it could be used for detecting subnets and ip
+
+	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-NetComputer | select cn,operatingsystem
+	cn   operatingsystem
+	--   ---------------
+	ODIN Windows Server 2012 R2 Standard Evaluation
+	THOR Windows 7 Professional
+	LOKI Windows 10 Pro
+
+
 
 ## Check smb version and server info
 

@@ -1,4 +1,11 @@
 {
   "attachmentFolderPath": "attachment",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "showFrontmatter": false,
+  "smartIndentList": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": true
 }
