@@ -343,6 +343,24 @@ Disable firewall
 	Ok.
 
 
+Powercat (netcat in powershell)
+
+import and start listener
+
+	PS C:\Users\testuser\Desktop\share> . .\powercat.ps1
+	PS C:\Users\testuser\Desktop\share> powercat
+	You must select either client mode (-c) or listen mode (-l).
+	PS C:\Users\testuser\Desktop\share> powercat -l -p 4444
+	i connected from kali
+	
+connect from another device
+
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ nc 192.168.200.112 4444                                    
+	i connected from kali
+
+
+
 ## Check smb version and server info
 
 ### nmap
