@@ -345,6 +345,8 @@ Disable firewall
 
 Powercat (netcat in powershell)
 
+Download script from here : https://github.com/besimorhino/powercat/blob/master/powercat.ps1
+
 import and start listener
 
 	PS C:\Users\testuser\Desktop\share> . .\powercat.ps1
