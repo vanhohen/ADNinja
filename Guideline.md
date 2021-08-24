@@ -350,8 +350,6 @@ Download script from here : https://github.com/besimorhino/powercat/blob/master/
 import and start listener
 
 	PS C:\Users\testuser\Desktop\share> . .\powercat.ps1
-	PS C:\Users\testuser\Desktop\share> powercat
-	You must select either client mode (-c) or listen mode (-l).
 	PS C:\Users\testuser\Desktop\share> powercat -l -p 4444
 	i connected from kali
 	
