@@ -1349,8 +1349,11 @@ check you access
 ![image](https://user-images.githubusercontent.com/13157446/130322707-c5e5d93c-cf17-46f7-9b08-a675ec60a83d.png)
 
 
+## Print nightmare LPE Sharpprintnightmare
 
-## Print nightmare LPE
+to do
+
+## Print nightmare LPE Powershell
 
 Download script from here : https://github.com/gyaansastra/Print-Nightmare-LPE
 
