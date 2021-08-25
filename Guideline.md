@@ -1470,7 +1470,9 @@ Check TGT in memory
 	Ticket            : 0x00000012 - aes256_hmac       ; kvno = 2        [...]
 
 
+Rest
 
+https://github.com/vanhohen/ADNinja/blob/main/Guideline.md#pass-the-ticket
 
 ## Abusing ACL
 
