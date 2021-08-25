@@ -1396,6 +1396,7 @@ check you access
 there is 2 device :
 
 pc-win10 unconstrained delegation enabled and comprimised to attacker
+
 odin - Domain controller
 
 we will force DC to authenticate pc-win10 and will extract TGT from memory
