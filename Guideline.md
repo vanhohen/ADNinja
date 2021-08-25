@@ -944,18 +944,6 @@ ntlmrelayx shell
 	[*] Done dumping SAM hashes for host: 192.168.200.110
 	[*] Stopping service RemoteRegistry
 
-
-## ms17-010-eternalblue
-
-### smb-ms17-010
-
-	msf6 auxiliary(scanner/smb/smb_ms17_010) > run
-
-	[+] 192.168.200.110:445   - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
-	[*] 192.168.200.110:445   - Scanned 1 of 1 hosts (100% complete)
-	[*] Auxiliary module execution completed
-	msf6 auxiliary(scanner/smb/smb_ms17_010) > 
-
 ## AS-REP Roasting
 
 If Kerberos Pre-Authentication is enabled, a [Timestamp](https://ldapwiki.com/wiki/Timestamp) will be [encrypted](https://ldapwiki.com/wiki/Encrypted) using the user's [password](https://ldapwiki.com/wiki/Password) [hash](https://ldapwiki.com/wiki/Hash) as an [encryption](https://ldapwiki.com/wiki/Encryption) [key](https://ldapwiki.com/wiki/Key). If the [KDC](https://ldapwiki.com/wiki/KDC) reads a valid time when using the user's password hash, which is available in the [Microsoft Active Directory](https://ldapwiki.com/wiki/Microsoft%20Active%20Directory), to decrypt the [Timestamp](https://ldapwiki.com/wiki/Timestamp), the [KDC](https://ldapwiki.com/wiki/KDC) knows that request isn't a replay of a previous request.
