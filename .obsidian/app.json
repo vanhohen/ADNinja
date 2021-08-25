@@ -6,7 +6,7 @@
   "showFrontmatter": false,
   "smartIndentList": true,
   "foldHeading": false,
-  "foldIndent": true,
+  "foldIndent": false,
   "showLineNumber": false,
   "useTab": true,
   "lineWrap": true
