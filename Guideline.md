@@ -114,9 +114,6 @@ This is a collection of notes about active directory and (post)exploitation
 	https://github.com/samratashok/nishang
 
 
-
-# Enumeration
-
 ## Active Directory Enumeration
 
 Get current Domain and Domain controller
@@ -746,7 +743,6 @@ Then import Sharpound and run it as normal.
 	bloodhound (another terminal)
 
 
-# Exploitation
 
 ## SMB Relay Attack
 
@@ -1146,9 +1142,6 @@ Crack with hashcat
 	hashcat -m 13100 hash.txt 500.txt --force 
 
 
-
-# Remote Code Execution
-
 ## WinRS
 
 	PS C:\Users\testuser> winrs.exe -r:odin.valhalla.local -u:administrator -p:Pass123! "cmd /c whoami & hostname & ipconfig
@@ -1239,10 +1232,6 @@ Crack with hashcat
 
 	C:\Windows\system32>whoami
 	nt authority\system
-
-
-# Post-Exploitation
-
 
 ## Pass the Hash
 
