@@ -1,4 +1,7 @@
-# ADNinja
+# README
+
+## ADNinja
+
 Active directory Attacks and Scripts
 
 PS: i am lazy to google so i will dump everything here
@@ -9,11 +12,9 @@ Check this awesome sites they explained better and more detailed than me:
 
 [ired](https://www.ired.team/)
 
-
-
 [USEFULL TOOLS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/USEFULL%20TOOLS.md)
 
-# Enumeration
+## Enumeration
 
 [Active Directory Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md)
 
@@ -33,8 +34,7 @@ Check this awesome sites they explained better and more detailed than me:
 
 [Sharphound](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Sharphound.md)
 
-
-# Kungfu
+## Kungfu
 
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md)
 
@@ -42,7 +42,7 @@ Check this awesome sites they explained better and more detailed than me:
 
 [Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Powershell%20Kungfu.md)
 
-# Exploitation
+## Exploitation
 
 [Golden Ticket](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Golden%20Ticket.md)
 
@@ -67,12 +67,4 @@ Check this awesome sites they explained better and more detailed than me:
 [Pass the Ticket](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Pass%20the%20Ticket.md)
 
 [Remote Command Execute](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Remote%20Command%20Execute.md)
-
-
-
-
-
-
-
-
 
