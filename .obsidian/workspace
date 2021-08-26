@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Guideline.md",
+            "file": "Tutorials/Enum Shares.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Guideline.md",
+                "file": "Tutorials/Enum Shares.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +88,8 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
-    "Guideline.md",
     "Tutorials/Untitled.md",
+    "Guideline.md",
     "Tutorials/Active Directory Enumeration.md",
     "Tutorials/USEFULL TOOLS.md",
     "Untitled.md",
