@@ -1,8 +1,5 @@
 # Abusing ACL
 
-	test command
-
-
 ## GenericALL-User
 
 We will check bloodhound and user has GenericAll rights for another user
