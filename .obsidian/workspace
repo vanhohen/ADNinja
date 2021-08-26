@@ -7,11 +7,8 @@
         "id": "30e3dbbf3bb1826f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "master.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "master.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +84,9 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
+    "Untitled.md",
     "master.md",
     "Guideline.md",
-    "Untitled.md",
     "attachment/Pasted image 20210813214029.png"
   ]
 }
