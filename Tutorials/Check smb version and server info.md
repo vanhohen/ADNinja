@@ -49,3 +49,10 @@
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 
 	SMB         192.168.200.100 445    ODIN             [*] Windows Server 2012 R2 Standard Evaluation 9600 x64 (name:ODIN) (domain:valhalla.local) (signing:True) (SMBv1:True)
+
+
+	┌──(kali㉿kali)-[~]
+	└─$ crackmapexec smb ip.list  | grep "signing:False" | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+	192.168.200.112
+
+	
