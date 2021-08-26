@@ -1,7 +1,8 @@
 This is a collection of notes about active directory and (post)exploitation
 
 
-[Active Directory Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md#active-directory-enumeration)
+[Active Directory Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md)
+[Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall)
 
 - [Metasploit](#metasploit)
 - [Bloodhound](#bloodhound)
@@ -76,43 +77,6 @@ This is a collection of notes about active directory and (post)exploitation
 
 
 
-# Firewall
-
-check firewall status
-
-	PS C:\Users\testuser\Desktop> netsh advfirewall show allprofiles state
-
-	Domain Profile Settings:
-	----------------------------------------------------------------------
-	State                                 ON
-
-	Private Profile Settings:
-	----------------------------------------------------------------------
-	State                                 ON
-
-	Public Profile Settings:
-	----------------------------------------------------------------------
-	State                                 ON
-	Ok.
-
-Disable firewall
-
-	PS C:\Users\testuser\Desktop> netsh advfirewall set allprofiles state off
-	Ok.
-	
-	PS C:\Users\testuser\Desktop> netsh advfirewall show allprofiles state
-	Domain Profile Settings:
-	----------------------------------------------------------------------
-	State                                 OFF
-
-	Private Profile Settings:
-	----------------------------------------------------------------------
-	State                                 OFF
-
-	Public Profile Settings:
-	----------------------------------------------------------------------
-	State                                 OFF
-	Ok.
 
 # Powershell Kungfu
 
