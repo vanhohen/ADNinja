@@ -5,7 +5,7 @@ PS: i am lazy to google so i will dump everything here
 
 
 
-[AS-REP Roasting](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/AS-REP%20Roasting.md)
+[AS-REP Roasting](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/AS-REP%20Roasting.md#)
 
 [Abusing ACL](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Abusing%20ACL.md)
 
