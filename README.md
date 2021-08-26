@@ -22,13 +22,16 @@ PS: i am lazy to google so i will dump everything here
 
 [Enum Local users](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Enum%20Local%20users.md)
 
-[Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Powershell%20Kungfu.md)
-
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Bloodhound.md)
 
 [Sharphound](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Sharphound.md)
 
 
+# Kungfu
+
+[Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md)
+
+[Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Powershell%20Kungfu.md)
 
 # Exploitation
 
@@ -51,8 +54,6 @@ PS: i am lazy to google so i will dump everything here
 [Pass the Hash](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Pass%20the%20Hash.md)
 
 [Pass the Ticket](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Pass%20the%20Ticket.md)
-
-[Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md)
 
 [Remote Command Execute](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Remote%20Command%20Execute.md)
 
