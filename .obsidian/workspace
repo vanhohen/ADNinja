@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Guideline.md",
+            "file": "master.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Guideline.md",
+                "file": "master.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,9 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
+    "master.md",
     "Guideline.md",
+    "Untitled.md",
     "attachment/Pasted image 20210813214029.png"
   ]
 }
