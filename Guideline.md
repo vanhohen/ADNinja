@@ -67,8 +67,6 @@ This is a collection of notes about active directory and (post)exploitation
   * [mimikatz logonpasswords](#mimikatz-logonpasswords)
   * [mimikatz dcsync](#mimikatz-dcsync)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 
 # Metasploit
