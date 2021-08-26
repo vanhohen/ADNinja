@@ -66,9 +66,9 @@ initiate Petitpotam attack
 
 
 
-	[-] Connecting to ncacn_np:10.13.8.1[\PIPE\lsarpc]
+	[-] Connecting to ncacn_np:<dc ip>[\PIPE\lsarpc]
 	[+] Connected!
-	[+] Binding to c681d488-d850-11d0-8c52-00c04fd90f7e
+	[+] Binding to c68....7e
 	[+] Successfully bound!
 	[-] Sending EfsRpcOpenFileRaw!
 	.
