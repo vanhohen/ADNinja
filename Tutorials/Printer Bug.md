@@ -77,4 +77,4 @@ Check TGT in memory
 
 Rest
 
-https://github.com/vanhohen/ADNinja/blob/main/Guideline.md#pass-the-ticket
+[Pass the Ticket](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Pass%20the%20Ticket.md)
