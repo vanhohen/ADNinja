@@ -56,6 +56,8 @@ Check this awesome sites they explained better and more detailed than me:
 
 [Printnightmare](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printnightmare.md)
 
+[PetitPotam and AD CS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/PetitPotam%20and%20AD%20CS.md)
+
 [SMB Relay Attack](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SMB%20Relay%20Attack.md)
 
 [Machine NTLM hash](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Machine%20NTLM%20hash.md)
