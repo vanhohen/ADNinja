@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "tutorials/printnightmare.md",
+            "file": "tutorials/abusing-acl.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tutorials/printnightmare.md",
+                "file": "tutorials/abusing-acl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
+    "tutorials/abusing-acl.md",
+    "tutorials/enum-shares.md",
     "tutorials/printnightmare.md",
     "tutorials/pass-the-ticket.md",
     "README.md",
@@ -95,8 +97,6 @@
     "Tutorials/Powershell Kungfu.md",
     "Tutorials/PetitPotam and AD CS.md",
     "Tutorials/Untitled.md",
-    "Tutorials/Windows Defender.md",
-    "Tutorials/Active Directory Enumeration.md",
-    "Tutorials/Printer Bug.md"
+    "Tutorials/Windows Defender.md"
   ]
 }
