@@ -2,7 +2,7 @@ This is a collection of notes about active directory and (post)exploitation
 
 
 [Active Directory Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md)
-[Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall)
+[Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md#firewall)
 
 - [Metasploit](#metasploit)
 - [Bloodhound](#bloodhound)
