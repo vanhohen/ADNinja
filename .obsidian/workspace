@@ -7,8 +7,11 @@
         "id": "30e3dbbf3bb1826f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Guideline.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Guideline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,9 +88,9 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
+    "Guideline.md",
     "Untitled.md",
     "master.md",
-    "Guideline.md",
     "attachment/Pasted image 20210813214029.png"
   ]
 }
