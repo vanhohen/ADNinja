@@ -38,6 +38,8 @@ Check this awesome sites they explained better and more detailed than me:
 
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md)
 
+[Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Windows%20Defender.md)
+
 [Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Powershell%20Kungfu.md)
 
 # Exploitation
