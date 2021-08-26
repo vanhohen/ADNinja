@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "tutorials/printnightmare.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "tutorials/printnightmare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
+    "tutorials/printnightmare.md",
+    "tutorials/pass-the-ticket.md",
     "README.md",
     "Tutorials/Credential Collection.md",
     "Tutorials/Powershell Kungfu.md",
@@ -95,8 +97,6 @@
     "Tutorials/Untitled.md",
     "Tutorials/Windows Defender.md",
     "Tutorials/Active Directory Enumeration.md",
-    "Tutorials/Printer Bug.md",
-    "Guideline.md",
-    "Tutorials/USEFULL TOOLS.md"
+    "Tutorials/Printer Bug.md"
   ]
 }
