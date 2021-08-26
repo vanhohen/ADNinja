@@ -31,13 +31,15 @@ Powerview
 	THOR Windows 7 Professional
 	LOKI Windows 10 Pro
 
-Later it could be used for detecting subnets and ip. Script to resolv hostname to ip (Credit : https://stackoverflow.com/a/47146987)
+Later it could be used for detecting subnets and ip. Script to resolv hostname to ip
 
 	foreach($line in [System.IO.File]::ReadLines("C:\path\to\ip.txt"))
 	
 	{
 		   Resolve-DnsName $line > result.txt
 	}
+	
+ [Credit](https://stackoverflow.com/a/47146987)
 
 ## Get AD users and details
 

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Tutorials/Active Directory Enumeration.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Tutorials/Active Directory Enumeration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +88,9 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
-    "README.md",
     "Tutorials/Active Directory Enumeration.md",
+    "Tutorials/Credential Collection.md",
+    "README.md",
     "Tutorials/Printer Bug.md",
     "Guideline.md",
     "Tutorials/Untitled.md",
