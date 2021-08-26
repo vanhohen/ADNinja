@@ -6,7 +6,7 @@ to do
 
 ## Printnightmare LPE Powershell
 
-Download script from here : [https://github.com/gyaansastra/Print-Nightmare-LPE](https://github.com/gyaansastra/Print-Nightmare-LPE)
+Download script from here: [https://github.com/gyaansastra/Print-Nightmare-LPE](https://github.com/gyaansastra/Print-Nightmare-LPE)
 
 check current users
 
