@@ -7,8 +7,11 @@
         "id": "30e3dbbf3bb1826f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,8 +88,8 @@
   },
   "active": "30e3dbbf3bb1826f",
   "lastOpenFiles": [
-    "Guideline.md",
     "README.md",
+    "Guideline.md",
     "Tutorials/Active Directory Enumeration.md",
     "Tutorials/Untitled.md",
     "Tutorials/USEFULL TOOLS.md",

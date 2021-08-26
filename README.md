@@ -4,7 +4,7 @@ Active directory Attacks and Scripts
 PS: i am lazy to google so i will dump everything here
 
 
-[Active Directory Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md)
+[Active Directory Enumeration](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md#active-directory-enumeration)
 
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md#firewall)
 
