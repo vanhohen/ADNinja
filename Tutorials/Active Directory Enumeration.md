@@ -31,7 +31,7 @@ Powerview
 	THOR Windows 7 Professional
 	LOKI Windows 10 Pro
 
-Later it could be used for detecting subnets and ip. Script to resolv hostname to ip
+Later it could be used for detecting subnets and ip. Script to resolv hostname to ip (Credit : https://stackoverflow.com/a/47146987)
 
 	foreach($line in [System.IO.File]::ReadLines("C:\path\to\ip.txt"))
 	
