@@ -1,7 +1,7 @@
 This is a collection of notes about active directory and (post)exploitation
 
 
-## [Tutorials](https://github.com/vanhohen/ADNinja/tree/main/Tutorials)/**Active Directory Enumeration.md**
+[Active Directory Enumeration.md](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Active%20Directory%20Enumeration.md#active-directory-enumeration)
 
 - [Metasploit](#metasploit)
 - [Bloodhound](#bloodhound)
