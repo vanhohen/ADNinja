@@ -1,5 +1,5 @@
 # ADNinja
-Active directory Attacks and Scripts
+Active directory Attacks and Scriptss
 
 PS: i am lazy to google so i will dump everything here
 
