@@ -18,6 +18,8 @@ Check this awesome sites they explained better and more detailed than me:
 # Cred dump
 [AS-REP Roasting](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/AS-REP%20Roasting.md)
 
+[Impacket secretsdump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Impacket%20secretsdump.md)
+
 [Kerberoasting](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Kerberoasting.md)
 
 [Lazagne](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Lazagne.md)
@@ -34,8 +36,6 @@ Check this awesome sites they explained better and more detailed than me:
 
 [READ NTDS.dit File with Shadow Copy](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/READ%20NTDS.dit%20File%20with%20Shadow%20Copy.md)
 
-[secretsdump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/secretsdump.md)
-
 [USEFULL](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/USEFULL.md)
 
 # Enumeration
@@ -45,7 +45,7 @@ Check this awesome sites they explained better and more detailed than me:
 
 [Check smb version and server info](https://github.com/vanhohen/ADNinja/blob/main/Enumeration/Check%20smb%20version%20and%20server%20info.md)
 
-[Enum Local users](https://github.com/vanhohen/ADNinja/blob/main/Enumeration/Enum%20Local%20users.md)
+[Enum Local Users](https://github.com/vanhohen/ADNinja/blob/main/Enumeration/Enum%20Local%20Users.md)
 
 [Enum Shares](https://github.com/vanhohen/ADNinja/blob/main/Enumeration/Enum%20Shares.md)
 
