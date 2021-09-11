@@ -30,7 +30,7 @@ checking delegation rights
 	UserPrincipalName    :
 	
 	
-Check in memory TGT with, there is no TGT in memory
+Check memory for TGT , there is no TGT in memory
 
 	sekurlsa::tickets /export
 
