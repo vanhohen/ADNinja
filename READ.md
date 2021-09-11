@@ -10,7 +10,6 @@ Check this awesome sites they explained better and more detailed than me:
 [ired](https://www.ired.team/)
 
 
-
 # Bloodhound
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Bloodhound/Bloodhound.md)
 
@@ -29,7 +28,7 @@ Check this awesome sites they explained better and more detailed than me:
 
 [Mimikatz minidump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Mimikatz%20minidump.md)
 
-[nishang get-Passhashes](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/nishang%20get-Passhashes.md)
+[nishang Get-Passhashes](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/nishang%20Get-Passhashes.md)
 
 [Pwdump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Pwdump.md)
 
@@ -117,7 +116,4 @@ Check this awesome sites they explained better and more detailed than me:
 [USEFULL TOOLS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/USEFULL%20TOOLS.md)
 
 [Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Windows%20Defender.md)
-
-
-
 
