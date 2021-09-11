@@ -1,4 +1,4 @@
-	https://github.com/AlessandroZ/LaZagne
+https://github.com/AlessandroZ/LaZagne
 	
 	PS C:\Users\testuser\Desktop> .\lazagne.exe windows
 
