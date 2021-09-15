@@ -1,15 +1,3 @@
-# ADNinja
-Active directory Attacks and Scripts
-
-PS: i am lazy to google so i will dump everything here
-
-Check this awesome sites they explained better and more detailed than me:
-
-[hacktricks](https://book.hacktricks.xyz/)
-
-[ired](https://www.ired.team/)
-
-
 # Bloodhound
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Bloodhound/Bloodhound.md)
 
@@ -105,7 +93,11 @@ Check this awesome sites they explained better and more detailed than me:
 # Tutorials
 [Abusing ACL](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Abusing%20ACL.md)
 
+[Create evil.dll](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Create%20evil.dll.md)
+
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md)
+
+[MSHTML CVE-2021-40444](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/MSHTML%20CVE-2021-40444.md)
 
 [PetitPotam and AD CS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/PetitPotam%20and%20AD%20CS.md)
 
@@ -113,7 +105,8 @@ Check this awesome sites they explained better and more detailed than me:
 
 [SMB Relay Attack](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SMB%20Relay%20Attack.md)
 
+[SpoolSample and NTLMRELAYX](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SpoolSample%20and%20NTLMRELAYX.md)
+
 [USEFULL TOOLS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/USEFULL%20TOOLS.md)
 
 [Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Windows%20Defender.md)
-
