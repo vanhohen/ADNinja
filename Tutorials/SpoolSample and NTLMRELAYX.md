@@ -1,5 +1,10 @@
 in this tutorial there is a spesific configuration exploited. During search of "Domain Admins" group i found one of the server machine is member of this group. So we will use spoolsample to force this machine to authenticate our server and relay request to another machine. Normally there should be authentication error but since machine is member of "Domain Admins" authentication succeed.
 
+Machine in "Domain Admins" Group
+
+![image](https://user-images.githubusercontent.com/13157446/133656582-f251b85d-13e3-48c5-baef-1964e1aaad23.png)
+
+
 Responder HTTP and SMB server should be disabled
 
 
