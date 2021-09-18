@@ -1,10 +1,5 @@
 i am writing something
 
-Check these awesome sites, they explained better than me
-
-https://book.hacktricks.xyz/
-
-https://www.ired.team/
 
 # Bloodhound
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Bloodhound/Bloodhound.md)
