@@ -1,3 +1,11 @@
+i am writing something
+
+Check these awesome sites, they explained better than me
+
+https://book.hacktricks.xyz/
+
+https://www.ired.team/
+
 # Bloodhound
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Bloodhound/Bloodhound.md)
 
@@ -66,10 +74,6 @@
 [Printnightmare](https://github.com/vanhohen/ADNinja/blob/main/Privilege%20Esc/Printnightmare.md)
 
 # TOOLS
-[Akagi64.jpg](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Akagi64.jpg)
-
-[Akagi64.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Akagi64.zip)
-
 [CreateUserAccounts.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CreateUserAccounts.zip)
 
 [CVE-2021-1675.ps1](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CVE-2021-1675.ps1)
@@ -90,12 +94,14 @@
 
 [SpoolSample.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SpoolSample.zip)
 
+[UAC.jpg](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/UAC.jpg)
+
+[UAC.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/UAC.zip)
+
 # Tutorials
 [Abusing ACL](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Abusing%20ACL.md)
 
 [Create evil.dll](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Create%20evil.dll.md)
-
-[Firewall](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Firewall.md)
 
 [MSHTML CVE-2021-40444](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/MSHTML%20CVE-2021-40444.md)
 
@@ -110,3 +116,7 @@
 [USEFULL TOOLS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/USEFULL%20TOOLS.md)
 
 [Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Windows%20Defender.md)
+
+# USEFULL
+[Firewall](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Firewall.md)
+
