@@ -102,16 +102,16 @@ i am writing something
 
 [PetitPotam and AD CS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/PetitPotam%20and%20AD%20CS.md)
 
-[Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Powershell%20Kungfu.md)
-
 [SMB Relay Attack](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SMB%20Relay%20Attack.md)
 
 [SpoolSample and NTLMRELAYX](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SpoolSample%20and%20NTLMRELAYX.md)
 
-[Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Windows%20Defender.md)
-
 # USEFULL
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Firewall.md)
 
+[Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Powershell%20Kungfu.md)
+
 [README](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/README.md)
+
+[Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Windows%20Defender.md)
 
