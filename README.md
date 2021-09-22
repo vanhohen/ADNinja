@@ -21,8 +21,6 @@ i am writing something
 
 [Mimikatz minidump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Mimikatz%20minidump.md)
 
-[nishang Get-Passhashes](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/nishang%20Get-Passhashes.md)
-
 [Pwdump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Pwdump.md)
 
 [READ NTDS.dit File with Shadow Copy](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/READ%20NTDS.dit%20File%20with%20Shadow%20Copy.md)
@@ -60,7 +58,6 @@ i am writing something
 [WinRS](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/WinRS.md)
 
 [Wmiexec](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/Wmiexec.md)
-
 
 # TOOLS
 [adduser.dll](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/adduser.dll)
