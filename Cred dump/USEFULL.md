@@ -1,6 +1,6 @@
 ## GET SAM and Security when system running
 
-On remote computer extrach SAM and SYSTEM 
+On remote computer extract SAM and SYSTEM 
 
 
 	reg save hklm\sam c:\sam
