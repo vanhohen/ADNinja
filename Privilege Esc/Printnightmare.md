@@ -1,10 +1,4 @@
 
-# Printnightmare LPE Sharpprintnightmare
-
-to do
-
-
-
 # Printnightmare LPE Powershell
 
 Download script from here : https://github.com/gyaansastra/Print-Nightmare-LPE
