@@ -9,6 +9,8 @@ i am writing something
 # Cred dump
 [AS-REP Roasting](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/AS-REP%20Roasting.md)
 
+[crackmapexec ntds](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/crackmapexec%20ntds.md)
+
 [Impacket secretsdump](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Impacket%20secretsdump.md)
 
 [Kerberoasting](https://github.com/vanhohen/ADNinja/blob/main/Cred%20dump/Kerberoasting.md)
@@ -58,6 +60,8 @@ i am writing something
 [WinRS](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/WinRS.md)
 
 [Wmiexec](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/Wmiexec.md)
+
+[xfreerdp](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/xfreerdp.md)
 
 # TOOLS
 [adduser.dll](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/adduser.dll)
