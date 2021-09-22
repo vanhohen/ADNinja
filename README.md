@@ -61,46 +61,44 @@ i am writing something
 
 [Wmiexec](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/Wmiexec.md)
 
-# Privilege Esc
-[HiveNightmare](https://github.com/vanhohen/ADNinja/blob/main/Privilege%20Esc/HiveNightmare.md)
-
-[Printer Bug](https://github.com/vanhohen/ADNinja/blob/main/Privilege%20Esc/Printer%20Bug.md)
-
-[Printnightmare](https://github.com/vanhohen/ADNinja/blob/main/Privilege%20Esc/Printnightmare.md)
 
 # TOOLS
+[adduser.dll](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/adduser.dll)
+
+[adduser.txt](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/adduser.txt)
+
+[Akagi64.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Akagi64.zip)
+
 [CreateUserAccounts.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CreateUserAccounts.zip)
 
 [CVE-2021-1675.ps1](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CVE-2021-1675.ps1)
 
-[Get-PassHashes.ps1](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Get-PassHashes.ps1)
+[HiveNightmare.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/HiveNightmare.zip)
 
-[HiveNightmare.exe](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/HiveNightmare.exe)
+[Rubeus.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Rubeus.zip)
 
-[powercat.ps1](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/powercat.ps1)
-
-[pwdump7.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/pwdump7.zip)
-
-[Rubeus.exe](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Rubeus.exe)
+[SharpPrintNightmare.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SharpPrintNightmare.zip)
 
 [SimpleHTTPServerWithUpload.py](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SimpleHTTPServerWithUpload.py)
 
-[SpoolSample.jpg](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SpoolSample.jpg)
-
 [SpoolSample.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SpoolSample.zip)
-
-[UAC.jpg](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/UAC.jpg)
-
-[UAC.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/UAC.zip)
 
 # Tutorials
 [Abusing ACL](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Abusing%20ACL.md)
 
-[Create evil.dll](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Create%20evil.dll.md)
+[HiveNightmare](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/HiveNightmare.md)
 
 [MSHTML CVE-2021-40444](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/MSHTML%20CVE-2021-40444.md)
 
 [PetitPotam and AD CS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/PetitPotam%20and%20AD%20CS.md)
+
+[Printer Bug](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printer%20Bug.md)
+
+[Printnightmare CVE-2021-1675](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printnightmare%20CVE-2021-1675.md)
+
+[Printnightmare LPE](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printnightmare%20LPE.md)
+
+[SharpPrintnightmare LPE](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SharpPrintnightmare%20LPE.md)
 
 [SMB Relay Attack](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SMB%20Relay%20Attack.md)
 
