@@ -55,7 +55,7 @@ we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin grou
 	VALHALLA\mrblack
 	The command completed successfully.
 
-
+  
 	PS C:\Users\testuser\Desktop\PowerSploit\Recon> net user
 
 	User accounts for \\PC-WIN10
