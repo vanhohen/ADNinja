@@ -4,6 +4,8 @@ https://github.com/byronkg/SharpGPOAbuse/tree/main/SharpGPOAbuse-master
 
 users has gpo write permissions
 
+![image](https://user-images.githubusercontent.com/13157446/137199957-d1dd3c7e-3843-4ccb-8ed0-3564a935d698.png)
+
 
 we will use "SharpGPOAbuse.exe "  and edit gpo to add a user to local admin group
 
