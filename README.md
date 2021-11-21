@@ -40,6 +40,8 @@ i am writing something
 
 [Enum Shares](https://github.com/vanhohen/ADNinja/blob/main/Enumeration/Enum%20Shares.md)
 
+[rpcclient](https://github.com/vanhohen/ADNinja/blob/main/Enumeration/rpcclient.md)
+
 # Lateral Movement
 [Checking your rights for remote device](https://github.com/vanhohen/ADNinja/blob/main/Lateral%20Movement/Checking%20your%20rights%20for%20remote%20device.md)
 
@@ -68,7 +70,9 @@ i am writing something
 
 [adduser.txt](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/adduser.txt)
 
-[Akagi64.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Akagi64.zip)
+[Cert.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Cert.zip)
+
+[Certify.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Certify.zip)
 
 [CreateUserAccounts.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CreateUserAccounts.zip)
 
@@ -76,15 +80,29 @@ i am writing something
 
 [HiveNightmare.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/HiveNightmare.zip)
 
+[MailSniper-master.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MailSniper-master.zip)
+
 [Rubeus.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Rubeus.zip)
 
+[Seatbelt.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Seatbelt.zip)
+
+[SharpGPOAbuse.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SharpGPOAbuse.zip)
+
 [SharpPrintNightmare.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SharpPrintNightmare.zip)
+
+[SharpUp.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SharpUp.zip)
+
+[SharpView.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SharpView.zip)
 
 [SimpleHTTPServerWithUpload.py](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SimpleHTTPServerWithUpload.py)
 
 [SpoolSample.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/SpoolSample.zip)
 
+[UAC.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/UAC.zip)
+
 # Tutorials
+[ABUSE GPO Permission](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/ABUSE%20GPO%20Permission.md)
+
 [Abusing ACL](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Abusing%20ACL.md)
 
 [HiveNightmare](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/HiveNightmare.md)
@@ -113,4 +131,3 @@ i am writing something
 [README](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/README.md)
 
 [Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Windows%20Defender.md)
-
