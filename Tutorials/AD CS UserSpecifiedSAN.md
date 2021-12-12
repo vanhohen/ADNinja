@@ -83,7 +83,7 @@ Enroll certificate with alternate name which is domain admin
 
 	Certify completed in 00:00:04.6491198
 	
-Save RSA KEY and Certificate to a file called "cert.pem" and convert it to cert.pfx
+Save RSA KEY and Certificate to a file called "cert.pem" and convert it to cert.pfx (i made this in kali linux machine)
 
 	openssl pkcs12 -in cert.pem -keyex -CSP "Microsoft Enhanced Cryptographic Provider v1.0" -export -out cert.pfx
 	
