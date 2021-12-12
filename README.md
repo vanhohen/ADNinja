@@ -1,6 +1,3 @@
-# 
-[README](https://github.com/vanhohen/ADNinja/blob/main//README.md)
-
 # Bloodhound
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Bloodhound/Bloodhound.md)
 
@@ -141,8 +138,6 @@
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Firewall.md)
 
 [Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Powershell%20Kungfu.md)
-
-[README](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/README.md)
 
 [Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Windows%20Defender.md)
 

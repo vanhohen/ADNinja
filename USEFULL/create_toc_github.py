@@ -13,14 +13,20 @@ for i in (filepath):
 
 given_path = (tmp)
 
-with open("ADNinja\\README.md", "w") as file:
+print (given_path)
+
+with open(given_path + "\\README.md", "w") as file:
     for path, dirs, files in os.walk(given_path):
         folder_name = path.split("\\")[-1]
 
         #inside folder .git contains github files so we will ignore those and skip this 
         if ".git" in path:
             continue
-
+        
+        if not folder_name:
+            continue
+        
+        print (folder_name)
         file.writelines("# %s\n" % (str(folder_name)))
         
         for f in files:
