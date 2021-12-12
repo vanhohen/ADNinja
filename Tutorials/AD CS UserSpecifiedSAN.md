@@ -25,8 +25,8 @@ There is a vulnerable template
 	Permissions
 	Enrollment Permissions
 	Enrollment Rights           : valhalla\Domain Admins        S-1-5-21-******-******-******-512
-										 						valhalla\Domain Users         S-1-5-21-******-******-******-513
-										  						valhalla\Enterprise Admins    S-1-5-21-******-******-******-519
+						valhalla\Domain Users         S-1-5-21-******-******-******-513
+						valhalla\Enterprise Admins    S-1-5-21-******-******-******-519
 										  						
 	Object Control Permissions
 			Owner                       : 	valhalla\admin		         S-1-5-21-******-******-******-5747
