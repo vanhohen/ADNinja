@@ -18,6 +18,12 @@ given_path = (tmp)
 
 print (given_path)
 
+ignore_folders = []
+
+ignore_folders.append(given_path)
+ignore_folders.append(".git")
+print (ignore_folders)
+
 with open(given_path + "\\README.md", "w") as file:
     for path, dirs, files in os.walk(given_path):
         folder_name = path.split("\\")[-1]
