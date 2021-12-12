@@ -1,7 +1,14 @@
 import os
 
+filepath = os.path.abspath(__file__).split("\\")[:-2]
+
+tmp = ""
+
+for i in (filepath):
+    tmp = tmp + str(i) + "\\"
+
 #edit here
-given_path = (r"C:\\Users\\monster\\Documents\\GitHub\\ADNinja\\")
+given_path = (tmp)
 
 with open("links.txt", "w") as file:
     for path, dirs, files in os.walk(given_path):
@@ -18,3 +25,6 @@ with open("links.txt", "w") as file:
             f2 = str(f.replace(" ", "%20"))
             link = "[%s](%s)" % (f.replace(".md", ""),str("https://github.com/vanhohen/ADNinja/blob/main/" + folder_name_edited + "/" + f2))
             file.writelines(str(link) + "\n\n")
+
+
+
