@@ -45,7 +45,7 @@ i will craft a special "exploit.java" file for code execution, for test we will 
 	}         
 
 
-Start tcp dump and filter for icmp package
+Start tcpdump and filter for icmp package
 
 	└─$ sudo tcpdump -i eth0 icmp                                                                                                                  
 	[sudo] password for kali: 
