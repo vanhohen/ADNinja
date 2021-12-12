@@ -1,5 +1,8 @@
 import os
 
+#edit here
+projectname = "https://github.com/vanhohen/ADNinja/"
+
 filepath = os.path.abspath(__file__).split("\\")[:-2]
 
 tmp = ""
@@ -7,10 +10,10 @@ tmp = ""
 for i in (filepath):
     tmp = tmp + str(i) + "\\"
 
-#edit here
+
 given_path = (tmp)
 
-with open("links.txt", "w") as file:
+with open("ADNinja\\README.md", "w") as file:
     for path, dirs, files in os.walk(given_path):
         folder_name = path.split("\\")[-1]
 
@@ -23,7 +26,7 @@ with open("links.txt", "w") as file:
         for f in files:
             folder_name_edited = str(folder_name.replace(" ", "%20"))
             f2 = str(f.replace(" ", "%20"))
-            link = "[%s](%s)" % (f.replace(".md", ""),str("https://github.com/vanhohen/ADNinja/blob/main/" + folder_name_edited + "/" + f2))
+            link = "[%s](%s)" % (f.replace(".md", ""),str(projectname + "blob/main/" + folder_name_edited + "/" + f2))
             file.writelines(str(link) + "\n\n")
 
 

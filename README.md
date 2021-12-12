@@ -1,5 +1,5 @@
-i am writing something
-
+# 
+[README](https://github.com/vanhohen/ADNinja/blob/main//README.md)
 
 # Bloodhound
 [Bloodhound](https://github.com/vanhohen/ADNinja/blob/main/Bloodhound/Bloodhound.md)
@@ -70,17 +70,21 @@ i am writing something
 
 [adduser.txt](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/adduser.txt)
 
-[Cert.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Cert.zip)
-
 [Certify.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Certify.zip)
 
 [CreateUserAccounts.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CreateUserAccounts.zip)
 
 [CVE-2021-1675.ps1](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/CVE-2021-1675.ps1)
 
+[cve-2021-42287 cve-2021-42278.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/cve-2021-42287%20cve-2021-42278.zip)
+
 [HiveNightmare.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/HiveNightmare.zip)
 
+[log4jbundle.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/log4jbundle.zip)
+
 [MailSniper-master.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MailSniper-master.zip)
+
+[MS-RPRN.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MS-RPRN.zip)
 
 [Rubeus.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Rubeus.zip)
 
@@ -105,7 +109,13 @@ i am writing something
 
 [Abusing ACL](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Abusing%20ACL.md)
 
+[AD CS UserSpecifiedSAN](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/AD%20CS%20UserSpecifiedSAN.md)
+
+[cve-2021-42287 cve-2021-42278](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/cve-2021-42287%20cve-2021-42278.md)
+
 [HiveNightmare](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/HiveNightmare.md)
+
+[Log4j](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Log4j.md)
 
 [MSHTML CVE-2021-40444](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/MSHTML%20CVE-2021-40444.md)
 
@@ -117,6 +127,8 @@ i am writing something
 
 [Printnightmare LPE](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printnightmare%20LPE.md)
 
+[RDP credentials from svchost.exe](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/RDP%20credentials%20from%20svchost.exe.md)
+
 [SharpPrintnightmare LPE](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SharpPrintnightmare%20LPE.md)
 
 [SMB Relay Attack](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SMB%20Relay%20Attack.md)
@@ -124,6 +136,8 @@ i am writing something
 [SpoolSample and NTLMRELAYX](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SpoolSample%20and%20NTLMRELAYX.md)
 
 # USEFULL
+[create_toc_github.py](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/create_toc_github.py)
+
 [Firewall](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Firewall.md)
 
 [Powershell Kungfu](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Powershell%20Kungfu.md)
@@ -131,3 +145,4 @@ i am writing something
 [README](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/README.md)
 
 [Windows Defender](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/Windows%20Defender.md)
+
