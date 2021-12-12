@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "da0c359adcaf06c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "485e4c2bfe1a109e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Tutorials/cve-2021-42287 cve-2021-42278 weaponisation.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5c1fc3cf283b55a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "12df2e92328e9116",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "001f0a8c96746aa3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a2c4ae576cb124c6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0df74373fae03b2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b2b5cc40a5da45a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f98603dab500dc7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tutorials/cve-2021-42287 cve-2021-42278 weaponisation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "485e4c2bfe1a109e",
+  "lastOpenFiles": [
+    "Tutorials/cve-2021-42287 cve-2021-42278 weaponisation.md"
+  ]
+}
