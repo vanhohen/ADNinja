@@ -1,8 +1,11 @@
 import os
 
-#edit here
+#edit here, you project url
 projectname = "https://github.com/vanhohen/ADNinja/"
 
+
+#todo
+#how depth the script since it is inside folder directy -1, is goes -2 -3 -4
 filepath = os.path.abspath(__file__).split("\\")[:-2]
 
 tmp = ""
@@ -18,11 +21,14 @@ print (given_path)
 with open(given_path + "\\README.md", "w") as file:
     for path, dirs, files in os.walk(given_path):
         folder_name = path.split("\\")[-1]
+        
 
+        #will make a list about it, if inside list ignore
         #inside folder .git contains github files so we will ignore those and skip this 
         if ".git" in path:
             continue
         
+        #i dont want README inside README xD
         if not folder_name:
             continue
         
