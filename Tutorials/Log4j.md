@@ -5,7 +5,9 @@ https://github.com/mbechler/marshalsec
 
 Okay flow is simple:
 
-when we sent a input to any application, they logs some request for later analysis. apache log4j library used for logging these inputs. We will send a payload and execute codes from apache log4j library during loggin
+When we sent a input to any application, they logs some request for later analysis. apache log4j library used for logging these inputs. We will send a payload and execute codes from apache log4j library during loggin
+
+I tested on "apache-log4j-2.13.0"
 
 first i will create a java vulnerable application. Basicly it gets an input and use that input inside of "logger.error" function
 
