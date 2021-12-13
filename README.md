@@ -77,6 +77,8 @@
 
 [HiveNightmare.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/HiveNightmare.zip)
 
+[ift.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/ift.zip)
+
 [log4jbundle.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/log4jbundle.zip)
 
 [MailSniper-master.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MailSniper-master.zip)
