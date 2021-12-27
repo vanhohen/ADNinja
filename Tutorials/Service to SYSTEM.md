@@ -1,7 +1,9 @@
 Thanks for : 
 
 https://github.com/itm4n/PrintSpoofer
+
 https://github.com/breenmachine/RottenPotatoNG
+
 https://github.com/ohpe/juicy-potato
 
 # PrintSpoofer
