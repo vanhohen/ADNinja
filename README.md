@@ -79,11 +79,17 @@
 
 [ift.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/ift.zip)
 
+[JuicyPotato.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/JuicyPotato.zip)
+
 [log4jbundle.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/log4jbundle.zip)
 
 [MailSniper-master.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MailSniper-master.zip)
 
 [MS-RPRN.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MS-RPRN.zip)
+
+[MSFRottenPotato.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/MSFRottenPotato.zip)
+
+[PrintSpoofer64.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/PrintSpoofer64.zip)
 
 [Rubeus.zip](https://github.com/vanhohen/ADNinja/blob/main/TOOLS/Rubeus.zip)
 
@@ -127,6 +133,8 @@
 [Printnightmare LPE](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printnightmare%20LPE.md)
 
 [RDP credentials from svchost.exe](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/RDP%20credentials%20from%20svchost.exe.md)
+
+[Service to SYSTEM](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Service%20to%20SYSTEM.md)
 
 [SharpPrintnightmare LPE](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SharpPrintnightmare%20LPE.md)
 
