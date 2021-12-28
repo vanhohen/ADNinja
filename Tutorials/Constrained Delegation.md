@@ -59,8 +59,7 @@ When all setup done you should see something like this. Two part is important "m
 
 First i will check which accounts configured for constrained delegation
 
-	PS C:\Users\testuser\Desktop> Get-DomainUser -TrustedToAuth | select samaccountname,msds-allowedtodelegateto,useraccount
-	control | fl
+	PS C:\Users\testuser\Desktop> Get-DomainUser -TrustedToAuth | select samaccountname,msds-allowedtodelegateto,useraccountcontrol | fl
 
 	samaccountname           : lazyuser
 	msds-allowedtodelegateto : {cifs/kabil.child.valhalla.local/child.valhalla.local, cifs/kabil.child.valhalla.local,
