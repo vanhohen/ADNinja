@@ -116,6 +116,10 @@
 
 [AD CS UserSpecifiedSAN](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/AD%20CS%20UserSpecifiedSAN.md)
 
+[Constrained Delegation (Computer Account)](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Constrained%20Delegation%20(Computer%20Account).md)
+
+[Constrained Delegation](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Constrained%20Delegation.md)
+
 [cve-2021-42287 cve-2021-42278](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/cve-2021-42287%20cve-2021-42278.md)
 
 [HiveNightmare](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/HiveNightmare.md)
@@ -125,8 +129,6 @@
 [MSHTML CVE-2021-40444](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/MSHTML%20CVE-2021-40444.md)
 
 [PetitPotam and AD CS](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/PetitPotam%20and%20AD%20CS.md)
-
-[Printer Bug](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printer%20Bug.md)
 
 [Printnightmare CVE-2021-1675](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/Printnightmare%20CVE-2021-1675.md)
 
@@ -141,6 +143,8 @@
 [SMB Relay Attack](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SMB%20Relay%20Attack.md)
 
 [SpoolSample and NTLMRELAYX](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SpoolSample%20and%20NTLMRELAYX.md)
+
+[SpoolSample and Unconstrained Delegation](https://github.com/vanhohen/ADNinja/blob/main/Tutorials/SpoolSample%20and%20Unconstrained%20Delegation.md)
 
 # USEFULL
 [create_toc_github.py](https://github.com/vanhohen/ADNinja/blob/main/USEFULL/create_toc_github.py)
