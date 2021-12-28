@@ -66,7 +66,7 @@ So this object can act behalf other users and access "cifs/kabil.child.valhalla.
 
 # I am the machine
 
-In our scenario we already comprimised "loki" machine and we have system rights. We will abuse this configuration and access service.
+In our scenario we already comprimised "loki" machine and we have system rights. "nt authority\\system" profile acts like machine account on domain.  We will abuse this configuration and access service.
 
 Firstly lets check our current permissions and profile
 
