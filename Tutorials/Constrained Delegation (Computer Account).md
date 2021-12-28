@@ -1,3 +1,12 @@
+Thanks for : 
+
+http://www.harmj0y.net/blog/activedirectory/s4u2pwnage/
+
+https://github.com/GhostPack/Rubeus#constrained-delegation-abuse
+
+https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py
+
+
 Lets say during our enumeration we found computer objects given rights to constrained delegation. 
 
 
