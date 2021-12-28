@@ -1,8 +1,5 @@
 link : https://github.com/leechristensen/SpoolSample
 
-
-# Printer Bug
-
 there is 2 device :
 
 pc-win10 unconstrained delegation enabled and compromised
