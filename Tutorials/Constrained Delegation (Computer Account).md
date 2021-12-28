@@ -146,7 +146,7 @@ Execution
 
 Okay in this scenario kinda different but still i want to add it to understand how it works. Let say "somehow" we got machine account hash. (it could be comprimising machine and read hash from memory or via dcsync)
 
-First check purge all tickets and check your access to "c\$" share
+First purge all tickets and check your access to "c\$" share
 
 	PS C:\Users\testuser\Desktop> klist purge
 
