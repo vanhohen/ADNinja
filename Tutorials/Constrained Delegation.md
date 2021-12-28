@@ -65,7 +65,7 @@ First i will check which accounts configured for constrained delegation
 							   cifs/KABIL, cifs/kabil.child.valhalla.local/CHILD...}
 	useraccountcontrol       : NORMAL_ACCOUNT, DONT_EXPIRE_PASSWORD, TRUSTED_TO_AUTH_FOR_DELEGATION
 
-Lets say somehow we comprimised this account, it could be accounts password or kerberos ticket and session , all works i guess. To demontrate it, i will continue with comprimising password account.
+Lets say somehow we comprimised this account, it could be accounts password or kerberos ticket and session , all works i guess. To demontrate it, i will continue with comprimising account password.
 
 I will request a kerberos ticket with Rubeus tool
 
