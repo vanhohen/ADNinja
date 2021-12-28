@@ -1,6 +1,7 @@
 Thanks for : 
 
 http://www.harmj0y.net/blog/activedirectory/s4u2pwnage/
+
 https://github.com/GhostPack/Rubeus#constrained-delegation-abuse
 
 # Setup
